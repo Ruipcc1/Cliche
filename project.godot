@@ -13,6 +13,10 @@ config_version=4
 config/name="Cliche"
 run/main_scene="res://Levels/Level 1.tscn"
 
+[autoload]
+
+PlayerStats="*res://Scripts/PlayerStats.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

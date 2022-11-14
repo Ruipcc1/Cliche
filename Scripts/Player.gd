@@ -12,10 +12,11 @@ enum {Ground, Air, Attack, AirAttack, Hit, Dead, LevelUp}
 enum {Friendship, Rage, Wisdom}
 
 var CurrentState = Ground
-var CurrentClass = Friendship
+var CurrentClass
 
-var CurrentLevel = 1
+var CurrentLevel
 var AlreadyDead = false
+var bombDamage
 
 var idleAnim = preload("res://Tilesets/Characters/Player/noBKG_KnightIdle_strip.png")
 var runAnim = preload("res://Tilesets/Characters/Player/noBKG_KnightRun_strip.png")
@@ -32,6 +33,9 @@ var _HitRight
 onready var attackArea = get_node("WeaponArea")
 onready var playerWeapon = get_node("WeaponArea/Weapon")
 onready var hitBoxColl = get_node("HitBox/Collider")
+onready var bombPacked = preload("res://Prefabs/Projectiles/Explosion.tscn")
+
+var bomb
 
 func _ready():
 	characterSprite.set_texture(idleAnim)
@@ -39,6 +43,16 @@ func _ready():
 	attacking = false
 	secondAttack = false
 	playerWeapon.disabled = true
+	bomb = bombPacked.instance()
+	
+	Damage = PlayerStats.Damage
+	MaxHealth = PlayerStats.MaxHealth
+	CurrentHealth = MaxHealth
+	Speed = PlayerStats.Speed
+	CurrentClass = PlayerStats.CurrentClass
+	CurrentLevel = PlayerStats.CurrentLevel
+	bombDamage = PlayerStats.bombDamage
+	
 	pass
 
 func _physics_process(delta):
@@ -48,7 +62,6 @@ func _process(delta):
 	Motion.y += Gravity * delta
 	if invincibilityTimer > 0:
 		invincibilityTimer -= delta
-		print_debug(hitBoxColl.is_disabled())
 	if invincibilityTimer < 0:
 		hitBoxColl.set_deferred("disabled", false)
 	States()
@@ -132,8 +145,8 @@ func States(delta = get_process_delta_time()):
 			else:
 				CurrentState = LevelUp
 		LevelUp:
-			MaxHealth += 20
-			CurrentHealth = MaxHealth
+			_LevelUp()
+			CurrentState = Ground
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Attack1" || anim_name == "Attack2" || anim_name == "Attack3":
@@ -159,3 +172,31 @@ func _receiveDamage(Damage, HitRight):
 	CurrentHealth -= Damage
 	_HitRight = HitRight
 	CurrentState = Hit
+	
+func _LevelUp():
+	CurrentLevel += 1
+	AlreadyDead = true
+	
+	match CurrentClass:
+		Friendship:
+			MaxHealth += 20
+			CurrentHealth = MaxHealth
+			PlayerStats.MaxHealth = MaxHealth
+			
+		Rage:
+			CurrentHealth = MaxHealth
+			Damage += 5
+			Speed += 5
+			PlayerStats.Damage = Damage
+			PlayerStats.Speed = Speed
+			
+		Wisdom:
+			CurrentHealth = MaxHealth
+			bomb.Damage = bombDamage
+			bombDamage += 10
+			PlayerStats.bombDamage = bombDamage
+			bomb.transform = $".".transform
+			get_tree().get_root().add_child(bomb)
+			
+		
+	
