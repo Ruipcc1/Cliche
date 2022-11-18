@@ -1,13 +1,13 @@
 extends Node
 
 export var _MaxHealth = 10
-export var Speed = 70
-export var Damage = 10
+export var _Speed = 70
+export var _Damage = 10
 
 enum {Friendship, Rage, Wisdom}
-var CurrentLevel = 1
-var CurrentClass = Friendship
-var bombDamage = 10
+var _CurrentLevel = 1
+var _CurrentClass = Friendship
+var _BombDamage = 10
 
 # Declare member variables here. Examples:
 # var a = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Terrain/Grassland_Terrain_Tileset.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Background/GrassLand_Background_Guide.png" type="Texture" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=5]
 [ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Hound_Variant/spritesheet.png" type="Texture" id=6]
 [ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Dark_Knight/spritesheet.png" type="Texture" id=7]
-[ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Archer_Variant/spritesheet v2.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Archer.gd" type="Script" id=8]
 [ext_resource path="res://Tilesets/swamp tileset/Terrain_and_Props.png" type="Texture" id=9]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_Tileset.png" type="Texture" id=10]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Terrain/Cave_Terrain_Tileset.png" type="Texture" id=11]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Tilesets/mini boss/png/summonAppear.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/hound.gd" type="Script" id=16]
 [ext_resource path="res://Scripts/PlayerStats.gd" type="Script" id=17]
+[ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Archer_Variant/Archer_Spritesheet.png" type="Texture" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -268,10 +269,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("WeaponArea/Weapon:disabled")
@@ -332,42 +333,30 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:secondAttack")
+tracks/3/path = NodePath("WeaponArea/Weapon:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.4 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponArea/Weapon:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "times": PoolRealArray( 0.2 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1.4 ) ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath("WeaponArea/Weapon:disabled")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
+tracks/4/type = "value"
+tracks/4/path = NodePath("WeaponArea/Weapon:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
@@ -407,25 +396,25 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:secondAttack")
+tracks/3/path = NodePath("WeaponArea/Weapon:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1 ),
+"times": PoolRealArray( 0.4 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ Vector2( 1.4, 0.8 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("WeaponArea/Weapon:scale")
+tracks/4/path = NodePath("WeaponArea/Weapon:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -434,27 +423,15 @@ tracks/4/keys = {
 "times": PoolRealArray( 0.4 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1.4, 0.8 ) ]
+"values": [ Vector2( 23, -4 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("WeaponArea/Weapon:position")
+tracks/5/path = NodePath("WeaponArea/Weapon:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.4 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 23, -4 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("WeaponArea/Weapon:disabled")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
 "times": PoolRealArray( 0, 0.4, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
@@ -904,6 +881,73 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 2, 1 ]
 }
 
+[sub_resource type="CapsuleShape2D" id=41]
+
+[sub_resource type="CircleShape2D" id=42]
+
+[sub_resource type="Animation" id=43]
+resource_name = "Attack"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_shootArrow"
+} ]
+}
+
+[sub_resource type="Animation" id=44]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "Running"
+length = 0.5
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7 ]
+}
+
 [node name="Level 1" type="Node2D"]
 position = Vector2( -1, 0 )
 
@@ -921,9 +965,6 @@ tile_data = PoolIntArray( -983027, 2, 196615, -983026, 2, 196614, -983025, 2, 19
 show_behind_parent = true
 position = Vector2( 289, 0 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="GrassLandBackground0" type="Sprite" parent="Sprite"]
 position = Vector2( 0, -208 )
@@ -933,18 +974,18 @@ __meta__ = {
 }
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 305, 17 )
+position = Vector2( 350, 17 )
 scale = Vector2( 0.440698, 0.379973 )
 collision/safe_margin = 1.0
 script = ExtResource( 5 )
 __meta__ = {
-"_edit_lock_": true,
 "_editor_description_": "This is the player"
 }
 
 [node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 3 )
 hframes = 15
+frame = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 2, -3 )
@@ -982,18 +1023,20 @@ monitorable = false
 [node name="Weapon" type="CollisionShape2D" parent="Player/WeaponArea"]
 light_mask = 2
 position = Vector2( 18, -7 )
-scale = Vector2( 1.4, 0.8 )
+scale = Vector2( 1, 1.4 )
 shape = SubResource( 36 )
 disabled = true
 
 [node name="HitBox" type="Area2D" parent="Player"]
+collision_mask = 0
+monitoring = false
 
 [node name="Collider" type="CollisionShape2D" parent="Player/HitBox"]
 position = Vector2( 2, -3 )
 scale = Vector2( 0.5, 0.75 )
 shape = SubResource( 2 )
 
-[node name="hound" type="KinematicBody2D" parent="."]
+[node name="Hound" type="KinematicBody2D" parent="."]
 position = Vector2( 264, 22 )
 scale = Vector2( 0.440698, 0.379973 )
 collision_layer = 2
@@ -1001,14 +1044,16 @@ collision_mask = 2
 script = ExtResource( 16 )
 MaxHealth = 30
 CurrentHealth = 30
+hFrames = 9
+groundCheckPosX = 20
 
-[node name="Sprite" type="Sprite" parent="hound"]
+[node name="Sprite" type="Sprite" parent="Hound"]
 position = Vector2( 0.712372, 0 )
 scale = Vector2( 0.982191, 1 )
 texture = ExtResource( 6 )
 hframes = 9
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="hound"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hound"]
 anims/Attack = SubResource( 21 )
 anims/Dead = SubResource( 37 )
 anims/Hit = SubResource( 24 )
@@ -1016,31 +1061,31 @@ anims/RESET = SubResource( 20 )
 anims/Running = SubResource( 23 )
 "anims/hound chill" = SubResource( 22 )
 
-[node name="GroundCheck" type="RayCast2D" parent="hound"]
+[node name="GroundCheck" type="RayCast2D" parent="Hound"]
 position = Vector2( -20, 0 )
 enabled = true
 
-[node name="RightCheck" type="RayCast2D" parent="hound"]
+[node name="RightCheck" type="RayCast2D" parent="Hound"]
 enabled = true
 cast_to = Vector2( 50, 0 )
 collision_mask = 2
 
-[node name="LeftCheck" type="RayCast2D" parent="hound"]
+[node name="LeftCheck" type="RayCast2D" parent="Hound"]
 enabled = true
 cast_to = Vector2( -50, 0 )
 collision_mask = 2
 
-[node name="HitBox" type="Area2D" parent="hound"]
+[node name="HitBox" type="Area2D" parent="Hound"]
 collision_layer = 0
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hound/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hound/HitBox"]
 light_mask = 2
 position = Vector2( 0, 7 )
 scale = Vector2( 2.7, 0.9 )
 shape = SubResource( 35 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hound"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hound"]
 light_mask = 2
 position = Vector2( 0, 7 )
 scale = Vector2( 2.7, 0.9 )
@@ -1057,20 +1102,6 @@ scale = Vector2( 0.982191, 1 )
 texture = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dark knight"]
-
-[node name="archer" type="KinematicBody2D" parent="."]
-visible = false
-position = Vector2( 264, 22 )
-scale = Vector2( 0.440698, 0.379973 )
-
-[node name="Sprite" type="Sprite" parent="archer"]
-position = Vector2( -11.9552, 17.9352 )
-scale = Vector2( 0.58633, 0.596961 )
-texture = ExtResource( 8 )
-vframes = 8
-frame = 7
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="archer"]
 
 [node name="summon" type="KinematicBody2D" parent="."]
 position = Vector2( 210, -3 )
@@ -1093,9 +1124,68 @@ anims/idle = SubResource( 34 )
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 17 )
 
+[node name="Archer" type="KinematicBody2D" parent="."]
+position = Vector2( 247, 25 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 8 )
+hFrames = 1
+vFrames = 8
+
+[node name="Sprite" type="Sprite" parent="Archer"]
+texture = ExtResource( 18 )
+vframes = 8
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer"]
+position = Vector2( 0, 7 )
+scale = Vector2( 1, 0.95 )
+shape = SubResource( 41 )
+
+[node name="GroundCheck" type="RayCast2D" parent="Archer"]
+position = Vector2( -10, 0 )
+enabled = true
+
+[node name="RightCheck" type="RayCast2D" parent="Archer"]
+enabled = true
+cast_to = Vector2( 20, 0 )
+collision_mask = 2
+
+[node name="LeftCheck" type="RayCast2D" parent="Archer"]
+enabled = true
+cast_to = Vector2( -20, 0 )
+collision_mask = 2
+
+[node name="ArrowShoot" type="Node2D" parent="Archer"]
+position = Vector2( -24.0001, -12 )
+
+[node name="HitBox" type="Area2D" parent="Archer"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer/HitBox"]
+position = Vector2( 0, 7 )
+scale = Vector2( 1, 0.95 )
+shape = SubResource( 41 )
+
+[node name="AttackRange" type="Area2D" parent="Archer"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer/AttackRange"]
+scale = Vector2( 20, 20 )
+shape = SubResource( 42 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Archer"]
+anims/Attack = SubResource( 43 )
+anims/RESET = SubResource( 44 )
+anims/Running = SubResource( 45 )
+
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Player/WeaponArea" to="Player" method="_on_Weapon_Area_body_entered"]
 [connection signal="script_changed" from="Player/WeaponArea/Weapon" to="Player" method="_on_Weapon_script_changed"]
-[connection signal="animation_finished" from="hound/AnimationPlayer" to="hound" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="area_entered" from="hound/HitBox" to="hound" method="_on_HitBox_area_entered"]
-[connection signal="body_entered" from="hound/HitBox" to="hound" method="_on_HitBox_body_entered"]
+[connection signal="animation_finished" from="Hound/AnimationPlayer" to="Hound" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="area_entered" from="Hound/HitBox" to="Hound" method="_on_HitBox_area_entered"]
+[connection signal="body_entered" from="Hound/HitBox" to="Hound" method="_on_HitBox_body_entered"]
+[connection signal="area_entered" from="Archer/HitBox" to="Archer" method="_on_HitBox_area_entered"]
+[connection signal="area_entered" from="Archer/AttackRange" to="Archer" method="_on_AttackRange_area_entered"]
+[connection signal="animation_finished" from="Archer/AnimationPlayer" to="Archer" method="_on_AnimationPlayer_animation_finished"]
