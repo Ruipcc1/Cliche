@@ -1,13 +1,12 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Terrain/Grassland_Terrain_Tileset.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Background/GrassLand_Background_Guide.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/Characters/Player/noBKG_KnightIdle_strip.png" type="Texture" id=3]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Background/GrassLand_Background_0.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=5]
-[ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Hound_Variant/spritesheet.png" type="Texture" id=6]
-[ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Dark_Knight/spritesheet.png" type="Texture" id=7]
-[ext_resource path="res://Scripts/Archer.gd" type="Script" id=8]
+[ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Dark_Knight/Knight_Default_Spritesheet.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/dark knight.gd" type="Script" id=7]
 [ext_resource path="res://Tilesets/swamp tileset/Terrain_and_Props.png" type="Texture" id=9]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_Tileset.png" type="Texture" id=10]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Terrain/Cave_Terrain_Tileset.png" type="Texture" id=11]
@@ -15,9 +14,7 @@
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Stronghold/Terrain/Stronghold_Terrain_Tileset.png" type="Texture" id=13]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Terrain/Dungeon_Terrain_Tileset.png" type="Texture" id=14]
 [ext_resource path="res://Tilesets/mini boss/png/summonAppear.png" type="Texture" id=15]
-[ext_resource path="res://Scripts/hound.gd" type="Script" id=16]
 [ext_resource path="res://Scripts/PlayerStats.gd" type="Script" id=17]
-[ext_resource path="res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Archer_Variant/Archer_Spritesheet.png" type="Texture" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -653,76 +650,19 @@ tracks/0/keys = {
 
 [sub_resource type="RectangleShape2D" id=36]
 
-[sub_resource type="Animation" id=21]
-resource_name = "Attack"
-length = 0.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2 ]
-}
-
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=42]
 resource_name = "Dead"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 4 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("HitBox:monitoring")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=24]
-resource_name = "Hit"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 4 ]
+"values": [ 0 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:modulate")
@@ -731,13 +671,92 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 0.698039, 0.407843, 0.407843, 1 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=43]
+resource_name = "Hit"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0.376471, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "LeftAttack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Weapon/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 30, -5 ), Vector2( -30, -5 ), Vector2( 30, -5 ), Vector2( 30, -5 ), Vector2( -30, -5 ), Vector2( -37.45, 35 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Weapon/CollisionShape2D:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 50.9, 50.9, 50.9, 50.9, -72.7, -101.8 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Weapon/CollisionShape2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 2 ), Vector2( 0.4, 2 ), Vector2( 0.4, 2 ), Vector2( 0.4, 2 ), Vector2( 4, 2 ), Vector2( 0.5, 2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Weapon/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=44]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -764,7 +783,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("HitBox:monitoring")
+tracks/2/path = NodePath("Weapon/CollisionShape2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -773,13 +792,111 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Weapon/CollisionShape2D:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 50.9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Weapon/CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 2 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Weapon/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
 }
 
-[sub_resource type="Animation" id=23]
-resource_name = "Running"
+[sub_resource type="Animation" id=49]
+resource_name = "RightAttack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Weapon/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Weapon/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -30, -5 ), Vector2( -30, -5 ), Vector2( -30, -5 ), Vector2( -30, -5 ), Vector2( 30, -5 ), Vector2( 37.45, 35 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Weapon/CollisionShape2D:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -58.0, -58.0, -58.0, -58.0, 72.7, 101.8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Weapon/CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 2 ), Vector2( 0.4, 2 ), Vector2( 0.4, 2 ), Vector2( 0.4, 2 ), Vector2( 4, 2 ), Vector2( 0.5, 2 ) ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "Run"
 length = 0.4
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -790,27 +907,14 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 5, 6, 7, 8 ]
+"values": [ 2, 3, 4, 5 ]
 }
 
-[sub_resource type="Animation" id=22]
-resource_name = "hound chill"
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 4, 5, 6, 7, 8 ]
-}
+[sub_resource type="CapsuleShape2D" id=46]
 
-[sub_resource type="CapsuleShape2D" id=35]
+[sub_resource type="CircleShape2D" id=47]
+
+[sub_resource type="RectangleShape2D" id=48]
 
 [sub_resource type="Animation" id=40]
 resource_name = "Explode"
@@ -881,73 +985,6 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 2, 1 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=41]
-
-[sub_resource type="CircleShape2D" id=42]
-
-[sub_resource type="Animation" id=43]
-resource_name = "Attack"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2 ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.7 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "_shootArrow"
-} ]
-}
-
-[sub_resource type="Animation" id=44]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 4 ]
-}
-
-[sub_resource type="Animation" id=45]
-resource_name = "Running"
-length = 0.5
-loop = true
-step = 0.15
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 4, 5, 6, 7 ]
-}
-
 [node name="Level 1" type="Node2D"]
 position = Vector2( -1, 0 )
 
@@ -974,7 +1011,7 @@ __meta__ = {
 }
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 350, 17 )
+position = Vector2( 305, 22 )
 scale = Vector2( 0.440698, 0.379973 )
 collision/safe_margin = 1.0
 script = ExtResource( 5 )
@@ -1036,72 +1073,74 @@ position = Vector2( 2, -3 )
 scale = Vector2( 0.5, 0.75 )
 shape = SubResource( 2 )
 
-[node name="Hound" type="KinematicBody2D" parent="."]
-position = Vector2( 264, 22 )
+[node name="dark knight" type="KinematicBody2D" parent="."]
+position = Vector2( 264, 19.7 )
 scale = Vector2( 0.440698, 0.379973 )
 collision_layer = 2
 collision_mask = 2
-script = ExtResource( 16 )
-MaxHealth = 30
-CurrentHealth = 30
-hFrames = 9
-groundCheckPosX = 20
+script = ExtResource( 7 )
+MaxHealth = 50
+CurrentHealth = 50
+hFrames = 2
+vFrames = 5
 
-[node name="Sprite" type="Sprite" parent="Hound"]
-position = Vector2( 0.712372, 0 )
-scale = Vector2( 0.982191, 1 )
+[node name="Sprite" type="Sprite" parent="dark knight"]
 texture = ExtResource( 6 )
-hframes = 9
+flip_h = true
+hframes = 2
+vframes = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hound"]
-anims/Attack = SubResource( 21 )
-anims/Dead = SubResource( 37 )
-anims/Hit = SubResource( 24 )
-anims/RESET = SubResource( 20 )
-anims/Running = SubResource( 23 )
-"anims/hound chill" = SubResource( 22 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="dark knight"]
+anims/Dead = SubResource( 42 )
+anims/Hit = SubResource( 43 )
+anims/LeftAttack = SubResource( 41 )
+anims/RESET = SubResource( 44 )
+anims/RightAttack = SubResource( 49 )
+anims/Run = SubResource( 45 )
 
-[node name="GroundCheck" type="RayCast2D" parent="Hound"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark knight"]
+position = Vector2( 0, 8 )
+scale = Vector2( 1, 1.2 )
+shape = SubResource( 46 )
+
+[node name="HitBox" type="Area2D" parent="dark knight"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark knight/HitBox"]
+position = Vector2( 0, 8 )
+scale = Vector2( 1, 1.2 )
+shape = SubResource( 46 )
+
+[node name="RightCheck" type="RayCast2D" parent="dark knight"]
+scale = Vector2( 1, 1 )
+enabled = true
+cast_to = Vector2( 40, 0 )
+collision_mask = 2
+
+[node name="GroundCheck" type="RayCast2D" parent="dark knight"]
 position = Vector2( -20, 0 )
 enabled = true
 
-[node name="RightCheck" type="RayCast2D" parent="Hound"]
+[node name="LeftCheck" type="RayCast2D" parent="dark knight"]
 enabled = true
-cast_to = Vector2( 50, 0 )
+cast_to = Vector2( -40, 0 )
 collision_mask = 2
 
-[node name="LeftCheck" type="RayCast2D" parent="Hound"]
-enabled = true
-cast_to = Vector2( -50, 0 )
-collision_mask = 2
-
-[node name="HitBox" type="Area2D" parent="Hound"]
+[node name="AttackRange" type="Area2D" parent="dark knight"]
 collision_layer = 0
-monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hound/HitBox"]
-light_mask = 2
-position = Vector2( 0, 7 )
-scale = Vector2( 2.7, 0.9 )
-shape = SubResource( 35 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark knight/AttackRange"]
+scale = Vector2( 5, 5 )
+shape = SubResource( 47 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hound"]
-light_mask = 2
-position = Vector2( 0, 7 )
-scale = Vector2( 2.7, 0.9 )
-shape = SubResource( 35 )
+[node name="Weapon" type="Area2D" parent="dark knight"]
+z_index = 1
+collision_layer = 0
 
-[node name="dark knight" type="KinematicBody2D" parent="."]
-visible = false
-position = Vector2( 264, 22 )
-scale = Vector2( 0.440698, 0.379973 )
-
-[node name="Sprite" type="Sprite" parent="dark knight"]
-position = Vector2( 0.712372, 0 )
-scale = Vector2( 0.982191, 1 )
-texture = ExtResource( 7 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="dark knight"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark knight/Weapon"]
+rotation = 0.888373
+scale = Vector2( 0.4, 2 )
+shape = SubResource( 48 )
 
 [node name="summon" type="KinematicBody2D" parent="."]
 position = Vector2( 210, -3 )
@@ -1124,68 +1163,10 @@ anims/idle = SubResource( 34 )
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 17 )
 
-[node name="Archer" type="KinematicBody2D" parent="."]
-position = Vector2( 247, 25 )
-scale = Vector2( 0.25, 0.25 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 8 )
-hFrames = 1
-vFrames = 8
-
-[node name="Sprite" type="Sprite" parent="Archer"]
-texture = ExtResource( 18 )
-vframes = 8
-frame = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer"]
-position = Vector2( 0, 7 )
-scale = Vector2( 1, 0.95 )
-shape = SubResource( 41 )
-
-[node name="GroundCheck" type="RayCast2D" parent="Archer"]
-position = Vector2( -10, 0 )
-enabled = true
-
-[node name="RightCheck" type="RayCast2D" parent="Archer"]
-enabled = true
-cast_to = Vector2( 20, 0 )
-collision_mask = 2
-
-[node name="LeftCheck" type="RayCast2D" parent="Archer"]
-enabled = true
-cast_to = Vector2( -20, 0 )
-collision_mask = 2
-
-[node name="ArrowShoot" type="Node2D" parent="Archer"]
-position = Vector2( -24.0001, -12 )
-
-[node name="HitBox" type="Area2D" parent="Archer"]
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer/HitBox"]
-position = Vector2( 0, 7 )
-scale = Vector2( 1, 0.95 )
-shape = SubResource( 41 )
-
-[node name="AttackRange" type="Area2D" parent="Archer"]
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer/AttackRange"]
-scale = Vector2( 20, 20 )
-shape = SubResource( 42 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Archer"]
-anims/Attack = SubResource( 43 )
-anims/RESET = SubResource( 44 )
-anims/Running = SubResource( 45 )
-
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Player/WeaponArea" to="Player" method="_on_Weapon_Area_body_entered"]
 [connection signal="script_changed" from="Player/WeaponArea/Weapon" to="Player" method="_on_Weapon_script_changed"]
-[connection signal="animation_finished" from="Hound/AnimationPlayer" to="Hound" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="area_entered" from="Hound/HitBox" to="Hound" method="_on_HitBox_area_entered"]
-[connection signal="body_entered" from="Hound/HitBox" to="Hound" method="_on_HitBox_body_entered"]
-[connection signal="area_entered" from="Archer/HitBox" to="Archer" method="_on_HitBox_area_entered"]
-[connection signal="area_entered" from="Archer/AttackRange" to="Archer" method="_on_AttackRange_area_entered"]
-[connection signal="animation_finished" from="Archer/AnimationPlayer" to="Archer" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="dark knight/AnimationPlayer" to="dark knight" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="area_entered" from="dark knight/HitBox" to="dark knight" method="_on_HitBox_area_entered"]
+[connection signal="area_entered" from="dark knight/AttackRange" to="dark knight" method="_on_AttackRange_area_entered"]
+[connection signal="area_entered" from="dark knight/Weapon" to="dark knight" method="_on_Weapon_area_entered"]

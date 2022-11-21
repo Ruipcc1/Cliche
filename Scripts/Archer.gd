@@ -10,7 +10,9 @@ func _ready():
 	hitAnimName = "Hit"
 	deadAnimName = "Dead"
 	attackAnimName = "Attack"
-	arrow = arrowPacked.instance()
+	
+	projectileLauncher = true
+	projectilePath = "ArrowShoot"
 	
 	OneAnim(defaultAnim, defaultAnimName, 8)
 	pass # Replace with function body.
@@ -37,6 +39,17 @@ func _on_HitBox_area_entered(area):
 		body._receiveDamagePlayer(Damage, hitRight)
 
 func _on_AttackRange_area_entered(area):
+	if walkingRight:
+		if area.global_position <= self.position:
+			walkingRight = !walkingRight
+			$GroundCheck.position.x = -$GroundCheck.position.x
+			$Sprite.flip_h = false
+	elif !walkingRight:
+		if area.global_position >= self.position:
+			walkingRight = !walkingRight
+			$GroundCheck.position.x = -$GroundCheck.position.x
+			$Sprite.flip_h = true
+		
 	_attack()
 
 func _attack():
@@ -44,6 +57,7 @@ func _attack():
 		CurrentState = EnemyAttack
 		
 func _shootArrow():
+	arrow = arrowPacked.instance()
 	arrow.Damage = Damage
 	get_parent().add_child(arrow)
 	arrow.position = $ArrowShoot.global_position

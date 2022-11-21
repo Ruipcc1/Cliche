@@ -10,6 +10,9 @@ export var Damage = 10.0
 export var hFrames = 10
 export var vFrames = 1
 
+export var projectileLauncher = false
+export var projectilePath = ""
+
 export var groundCheckPosX = 10
 
 onready var characterSprite = get_node("Sprite")
@@ -24,7 +27,7 @@ var hitAnimName = ""
 var deadAnimName = ""
 var attackAnimName = ""
 
-var walkingRight = false
+export var walkingRight = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,34 +46,43 @@ func States(delta = get_process_delta_time()):
 		Walk:
 			if walkingRight:
 				$Sprite.flip_h = true
-				OneAnim(defaultAnim, defaultAnimName, 9)
+				OneAnim(defaultAnim, defaultAnimName, hFrames, vFrames)
 				Motion.x = Speed
 			else:
 				$Sprite.flip_h = false
-				OneAnim(defaultAnim, defaultAnimName, 9)
+				OneAnim(defaultAnim, defaultAnimName, hFrames, vFrames)
 				Motion.x = -Speed
 			if !$GroundCheck.is_colliding():
 				walkingRight = !walkingRight
 				$GroundCheck.position.x = -$GroundCheck.position.x
+				if projectileLauncher:
+					get_node(projectilePath).position.x = -get_node(projectilePath).position.x
 			if $RightCheck.is_colliding():
 				walkingRight = false
-				$GroundCheck.position.x = -groundCheckPosX
+				$GroundCheck.position.x = -$GroundCheck.position.x
+				if projectileLauncher:
+					get_node(projectilePath).position.x = -get_node(projectilePath).position.x
 			elif $LeftCheck.is_colliding():
 				walkingRight = true
-				$GroundCheck.position.x = groundCheckPosX
+				$GroundCheck.position.x = -$GroundCheck.position.x
+				if projectileLauncher:
+					get_node(projectilePath).position.x = -get_node(projectilePath).position.x
 		EnemyHit:
 			if(CurrentHealth <= 0):
 				CurrentState = EnemyDead
 			else:
 				Motion.x = 0
-				OneAnim(defaultAnim, hitAnimName, 9)
+				OneAnim(defaultAnim, hitAnimName, hFrames, vFrames)
 		EnemyDead:
 			Motion.x = 0
-			OneAnim(defaultAnim, deadAnimName, 9)
+			$CollisionShape2D.set_deferred("disabled", true)
+			$HitBox.set_deferred("disabled", true)
+			OneAnim(defaultAnim, deadAnimName, $Sprite.get_hframes(), $Sprite.get_vframes())
 		EnemyAttack:
 			Motion.x = 0
 
 func _receiveDamage(Damage):
+	$AnimationPlayer.stop(true)
 	CurrentHealth -= Damage
 	CurrentState = EnemyHit
 
