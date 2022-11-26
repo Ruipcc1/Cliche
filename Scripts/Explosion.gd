@@ -16,7 +16,7 @@ func _ready():
 #	pass
 
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished():
 	queue_free()
 
 

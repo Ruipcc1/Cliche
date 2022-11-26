@@ -77,19 +77,19 @@ func States(delta = get_process_delta_time()):
 			Motion.x = 0
 			$CollisionShape2D.set_deferred("disabled", true)
 			$HitBox.set_deferred("disabled", true)
-			OneAnim(defaultAnim, deadAnimName, $Sprite.get_hframes(), $Sprite.get_vframes())
+			OneAnim(defaultAnim, deadAnimName, hFrames, vFrames)
 		EnemyAttack:
 			Motion.x = 0
 
-func _receiveDamage(Damage):
+func _receiveDamage(Hit):
 	$AnimationPlayer.stop(true)
-	CurrentHealth -= Damage
+	CurrentHealth -= Hit
 	CurrentState = EnemyHit
 
-func OneAnim(Texture_Name, Animation_Name, hFrames = 1, vFrames = 1):
+func OneAnim(Texture_Name, Animation_Name, _hFrames = 1, _vFrames = 1):
 	if characterSprite.get_texture() != Texture_Name:
 		characterSprite.set_texture(Texture_Name)
-		characterSprite.hframes = hFrames
-		characterSprite.vframes = vFrames
+		characterSprite.hframes = _hFrames
+		characterSprite.vframes = _vFrames
 	if $AnimationPlayer.current_animation != Animation_Name:
 		$AnimationPlayer.play(Animation_Name)

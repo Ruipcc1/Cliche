@@ -133,7 +133,13 @@ func States(delta = get_process_delta_time()):
 		Hit:
 			if(CurrentHealth <= 0):
 				PlayerCurrentState = Dead
+				attacking = false
+				CurrentAttack = None
+				playerWeapon.disabled = true
 			else:
+				attacking = false
+				CurrentAttack = None
+				playerWeapon.disabled = true
 				OneAnim(idleAnim, "Hit", 15)
 				hitBoxColl.set_deferred("disabled", true)
 				if _HitRight:
