@@ -54,4 +54,3 @@ func _on_Area2D_area_entered(area):
 	else:
 		hitRight = false
 		body._receiveDamagePlayer(Damage, hitRight)
-	pass # Replace with function body.

@@ -5,14 +5,12 @@ func _ready():
 	hitAnimName = "Hit"
 	deadAnimName = "Dead"
 	
-	defaultAnim = preload("res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Hound_Variant/spritesheet.png")
-	
-	OneAnim(defaultAnim, defaultAnimName, 9)
+	OneAnim(defaultAnimName)
 	pass
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Hit":
-		OneAnim(defaultAnim, defaultAnimName, 9)
+		OneAnim(defaultAnimName)
 		CurrentState = Walk
 	if anim_name == "Dead":
 		queue_free()

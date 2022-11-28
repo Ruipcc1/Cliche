@@ -17,8 +17,6 @@ export var groundCheckPosX = 10
 
 onready var characterSprite = get_node("Sprite")
 
-var defaultAnim = preload("res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Hound_Variant/spritesheet.png")
-
 enum {Walk, Run, EnemyAttack, EnemyHit, EnemyDead}
 var CurrentState = Walk
 
@@ -31,8 +29,6 @@ export var walkingRight = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	characterSprite.hframes = hFrames
-	characterSprite.vframes = vFrames
 	pass # Replace with function body.
 	
 func _physics_process(delta):
@@ -46,11 +42,11 @@ func States(delta = get_process_delta_time()):
 		Walk:
 			if walkingRight:
 				$Sprite.flip_h = true
-				OneAnim(defaultAnim, defaultAnimName, hFrames, vFrames)
+				OneAnim(defaultAnimName)
 				Motion.x = Speed
 			else:
 				$Sprite.flip_h = false
-				OneAnim(defaultAnim, defaultAnimName, hFrames, vFrames)
+				OneAnim(defaultAnimName)
 				Motion.x = -Speed
 			if !$GroundCheck.is_colliding():
 				walkingRight = !walkingRight
@@ -72,12 +68,12 @@ func States(delta = get_process_delta_time()):
 				CurrentState = EnemyDead
 			else:
 				Motion.x = 0
-				OneAnim(defaultAnim, hitAnimName, hFrames, vFrames)
+				OneAnim(hitAnimName)
 		EnemyDead:
 			Motion.x = 0
 			$CollisionShape2D.set_deferred("disabled", true)
 			$HitBox.set_deferred("disabled", true)
-			OneAnim(defaultAnim, deadAnimName, hFrames, vFrames)
+			OneAnim(deadAnimName)
 		EnemyAttack:
 			Motion.x = 0
 
@@ -86,10 +82,6 @@ func _receiveDamage(Hit):
 	CurrentHealth -= Hit
 	CurrentState = EnemyHit
 
-func OneAnim(Texture_Name, Animation_Name, _hFrames = 1, _vFrames = 1):
-	if characterSprite.get_texture() != Texture_Name:
-		characterSprite.set_texture(Texture_Name)
-		characterSprite.hframes = _hFrames
-		characterSprite.vframes = _vFrames
+func OneAnim(Animation_Name):
 	if $AnimationPlayer.current_animation != Animation_Name:
 		$AnimationPlayer.play(Animation_Name)

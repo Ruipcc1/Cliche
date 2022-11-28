@@ -1,6 +1,6 @@
 extends Node
 
-export var _MaxHealth = 10
+export var _MaxHealth = 100
 export var _Speed = 70
 export var _Damage = 10
 

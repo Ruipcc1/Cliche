@@ -5,7 +5,6 @@ var arrow
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	defaultAnim = preload("res://Tilesets/Pixelart_Medieval_Fantasy_Characters_Pack/Enemies/Archer_Variant/Archer_Spritesheet.png")
 	defaultAnimName = "Running"
 	hitAnimName = "Hit"
 	deadAnimName = "Dead"
@@ -14,17 +13,17 @@ func _ready():
 	projectileLauncher = true
 	projectilePath = "ArrowShoot"
 	
-	OneAnim(defaultAnim, defaultAnimName, 8)
+	OneAnim(defaultAnimName)
 	pass # Replace with function body.
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Hit":
-		OneAnim(defaultAnim, defaultAnimName,null, 9)
+		OneAnim(defaultAnimName)
 		CurrentState = Walk
 	if anim_name == "Dead":
 		queue_free()
 	if anim_name == "Attack":
-		OneAnim(defaultAnim, defaultAnimName,null, 9)
+		OneAnim(defaultAnimName)
 		CurrentState = Walk
 
 func _on_HitBox_area_entered(area):
@@ -53,7 +52,7 @@ func _on_AttackRange_area_entered(area):
 	_attack()
 
 func _attack():
-		OneAnim(defaultAnim, attackAnimName, null, 9)
+		OneAnim(attackAnimName)
 		CurrentState = EnemyAttack
 		
 func _shootArrow():

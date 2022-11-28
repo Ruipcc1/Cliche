@@ -19,10 +19,6 @@ var AlreadyDead = false
 var BombDamage
 
 var idleAnim = preload("res://Tilesets/Characters/Player/noBKG_KnightIdle_strip.png")
-var runAnim = preload("res://Tilesets/Characters/Player/noBKG_KnightRun_strip.png")
-var attackAnim = preload("res://Tilesets/Characters/Player/noBKG_KnightAttack_strip.png")
-var jumpAnim = preload("res://Tilesets/Characters/Player/noBKG_KnightJumpAndFall_strip.png")
-var deadAnim = preload("res://Tilesets/Characters/Player/noBKG_KnightDeath_strip.png")
 
 var attacking = false
 var knockback = 70
@@ -69,15 +65,21 @@ func States(delta = get_process_delta_time()):
 			if Input.is_action_pressed(("right")):
 				$Sprite.flip_h = false
 				attackArea.position.x = 0
-				OneAnim(runAnim, "Running", 8)
+				$TeleportHere.position.x = -30
+				$TeleportHere/CheckRight.enabled = false
+				$TeleportHere/CheckLeft.enabled = true
+				OneAnim("Running")
 				Motion.x = Speed
 			elif Input.is_action_pressed("left"):
 				$Sprite.flip_h = true
 				attackArea.position.x = -35
-				OneAnim(runAnim, "Running", 8)
+				$TeleportHere.position.x = 30
+				$TeleportHere/CheckRight.enabled = true
+				$TeleportHere/CheckLeft.enabled = false
+				OneAnim("Running")
 				Motion.x = -Speed
 			else:
-				OneAnim(idleAnim, "Idle", 15)
+				OneAnim("Idle")
 				Motion.x = 0
 			if Input.is_action_pressed("jump"):
 				Motion.y = - JumpHeight
@@ -95,22 +97,28 @@ func States(delta = get_process_delta_time()):
 				PlayerCurrentState = Attack
 		Air:
 			if Motion.y < 0:
-				OneAnim(jumpAnim, "Jump", 13)
+				OneAnim("Jump")
 			elif Motion.y > 0:
 				if $AnimationPlayer.current_animation != "Landing":
-					OneAnim(jumpAnim, "Falling", 13)
+					OneAnim("Falling")
 			if Input.is_action_pressed(("right")):
 				$Sprite.flip_h = false
 				attackArea.position.x = 0
+				$TeleportHere.position.x = -30
+				$TeleportHere/CheckRight.enabled = false
+				$TeleportHere/CheckLeft.enabled = true
 				Motion.x = Speed
 			elif Input.is_action_pressed(("left")):
 				$Sprite.flip_h = true
 				attackArea.position.x = -35
+				$TeleportHere.position.x = 30
+				$TeleportHere/CheckRight.enabled = true
+				$TeleportHere/CheckLeft.enabled = false
 				Motion.x = -Speed
 			else:
 				Motion.x = 0
 			if is_on_floor():
-				OneAnim(jumpAnim, "Landing", 13)
+				OneAnim("Landing")
 				PlayerCurrentState = Ground
 			if Input.is_action_pressed("attack"):
 				PlayerCurrentState = Attack
@@ -119,16 +127,16 @@ func States(delta = get_process_delta_time()):
 				if !attacking:
 					match CurrentAttack:
 						None:
-							OneAnim(attackAnim, "Attack1", 20)
+							OneAnim("Attack1")
 							CurrentAttack = Attack1
 						Attack1:
-							OneAnim(attackAnim, "Attack2", 20)
+							OneAnim("Attack2")
 							CurrentAttack = Attack2
 						Attack2:
-							OneAnim(attackAnim, "Attack3", 20)
+							OneAnim("Attack3")
 							CurrentAttack = Attack3
 						Attack3:
-							OneAnim(attackAnim, "Attack2", 20)
+							OneAnim("Attack2")
 					attacking = true
 		Hit:
 			if(CurrentHealth <= 0):
@@ -140,7 +148,7 @@ func States(delta = get_process_delta_time()):
 				attacking = false
 				CurrentAttack = None
 				playerWeapon.disabled = true
-				OneAnim(idleAnim, "Hit", 15)
+				OneAnim("Hit")
 				hitBoxColl.set_deferred("disabled", true)
 				if _HitRight:
 					Motion.x -= lerp(Motion.x, knockback, 0.5)
@@ -151,12 +159,20 @@ func States(delta = get_process_delta_time()):
 		Dead:
 			if AlreadyDead || CurrentLevel == 5:
 				Motion.x = 0
-				OneAnim(deadAnim, "Dead", 15)
+				OneAnim("Dead")
 			else:
 				PlayerCurrentState = LevelUp
 		LevelUp:
 			_LevelUp()
 			PlayerCurrentState = Ground
+	if $TeleportHere/CheckRight.is_colliding():
+		$TeleportHere.position.x = -$TeleportHere.position.x
+		$TeleportHere/CheckRight.enabled = false
+		$TeleportHere/CheckLeft.enabled = true
+	if $TeleportHere/CheckLeft.is_colliding():
+		$TeleportHere.position.x = -$TeleportHere.position.x
+		$TeleportHere/CheckLeft.enabled = false
+		$TeleportHere/CheckRight.enabled = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Attack1" || anim_name == "Attack2" || anim_name == "Attack3":

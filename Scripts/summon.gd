@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
-
-var Motion = Vector2()
-var Up = Vector2(0,-1)
+var Direction = Vector2()
+var speed = 100
 export var playerPos = Vector2()
+var spawnPos = Vector2()
+export var Damage = 10
 
 var playerLocated
 
@@ -19,9 +20,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if playerLocated:
-		Motion.x = lerp(self.position.x, playerPos.x, 1)
-		Motion.y = lerp(self.position.y, playerPos.y, 1)
-		Motion = move_and_slide(Motion, Up, true)
+		Direction = playerPos - spawnPos
+		move_and_collide(Direction.normalized() * delta * speed)
 	destroySummonSecs -= get_process_delta_time()
 	if destroySummonSecs <= 0:
 		queue_free()
@@ -31,5 +31,18 @@ func _process(delta):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Spawn":
 		playerPos = get_node("../Player").global_position
+		spawnPos = self.global_position
 		playerLocated = true
 	pass # Replace with function body.
+
+
+func _on_HitBox_area_entered(area):
+	var hitRight
+	var body = area.get_node("../")
+	body.invincibilityTimer = body.invincibilitySeconds
+	if $".".position.x > body.position.x:
+		hitRight = false
+		body._receiveDamagePlayer(Damage, hitRight)
+	else:
+		hitRight = true
+		body._receiveDamagePlayer(Damage, hitRight)
