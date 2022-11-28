@@ -1,63 +1,156 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=82 format=2]
 
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_Tileset.png" type="Texture" id=1]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/SnowLand/Terrain/SnowLand_Terrain_Tileset.png" type="Texture" id=2]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Stronghold/Terrain/Stronghold_Terrain_Tileset.png" type="Texture" id=3]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Terrain/Dungeon_Terrain_Tileset.png" type="Texture" id=4]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Terrain/Cave_Terrain_Tileset.png" type="Texture" id=5]
-[ext_resource path="res://Tilesets/swamp tileset/Terrain_and_Props.png" type="Texture" id=6]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Terrain/Grassland_Terrain_Tileset.png" type="Texture" id=7]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_TallGrass_1.png" type="Texture" id=8]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_AnimalSkull.png" type="Texture" id=9]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Sand.png" type="Texture" id=10]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_GrassUp.png" type="Texture" id=11]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_AnimalBones.png" type="Texture" id=12]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_3.png" type="Texture" id=13]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Details.png" type="Texture" id=14]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_TallGrass_2.png" type="Texture" id=15]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_3.png" type="Texture" id=16]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/Animated/GrassLand_WaterBubbles.png" type="Texture" id=17]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Trunk_Center1.png" type="Texture" id=18]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Entry_3.png" type="Texture" id=19]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_1.png" type="Texture" id=20]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Bush.png" type="Texture" id=21]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_4.png" type="Texture" id=22]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_2.png" type="Texture" id=23]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Flower_1.png" type="Texture" id=24]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Trunk_Center2.png" type="Texture" id=25]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Flower_3.png" type="Texture" id=26]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Details.png" type="Texture" id=27]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_2.png" type="Texture" id=28]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Entry_1.png" type="Texture" id=29]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Entry_2.png" type="Texture" id=30]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_LoneTrunk.png" type="Texture" id=31]
+[ext_resource path="res://Tilesets/swamp tileset/Terrain_and_Props.png" type="Texture" id=1]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Terrain/Grassland_Terrain_Tileset.png" type="Texture" id=2]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Sand.png" type="Texture" id=3]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_TallGrass_1.png" type="Texture" id=4]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_AnimalSkull.png" type="Texture" id=5]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Stronghold/Terrain/Stronghold_Terrain_Tileset.png" type="Texture" id=6]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_Tileset.png" type="Texture" id=7]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/SnowLand/Terrain/SnowLand_Terrain_Tileset.png" type="Texture" id=8]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Terrain/Cave_Terrain_Tileset.png" type="Texture" id=9]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Terrain/Dungeon_Terrain_Tileset.png" type="Texture" id=10]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_Candle1.png" type="Texture" id=11]
+[ext_resource path="res://Tilesets/swamp tileset/Terrain-and-Props-OLD.png" type="Texture" id=12]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_Details.png" type="Texture" id=13]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Props/Cave_Details.png" type="Texture" id=14]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Trunk_Left.png" type="Texture" id=15]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/Animated/GrassLand_WaterSurfaceAnim.png" type="Texture" id=16]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Details.png" type="Texture" id=17]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_WallTorch.png" type="Texture" id=18]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Details.png" type="Texture" id=19]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_SkullTorch.png" type="Texture" id=20]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_BigTorch.png" type="Texture" id=21]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_1.png" type="Texture" id=22]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_TallGrass_2.png" type="Texture" id=23]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Trunk_Center1.png" type="Texture" id=24]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_GrassUp.png" type="Texture" id=25]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_AnimalBones.png" type="Texture" id=26]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Details.png" type="Texture" id=27]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_3.png" type="Texture" id=28]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_3.png" type="Texture" id=29]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/Animated/GrassLand_WaterBubbles.png" type="Texture" id=30]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/SnowLand/Background/Snowland_Background_Guide.png" type="Texture" id=31]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Flower_2.png" type="Texture" id=32]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_Candle2.png" type="Texture" id=33]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Background/Cave_Background_Guide.png" type="Texture" id=34]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Background/Cave_Background_1.png" type="Texture" id=35]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_BigTorch.png" type="Texture" id=36]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Details.png" type="Texture" id=37]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_WallTorch.png" type="Texture" id=38]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Trunk_Left.png" type="Texture" id=39]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_1.png" type="Texture" id=40]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_Candle1.png" type="Texture" id=41]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Details.png" type="Texture" id=42]
-[ext_resource path="res://Tilesets/swamp tileset/Terrain-and-Props-OLD.png" type="Texture" id=43]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_Details.png" type="Texture" id=44]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/Animated/GrassLand_WaterSurfaceAnim.png" type="Texture" id=45]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_SkullTorch.png" type="Texture" id=46]
-[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Props/Cave_Details.png" type="Texture" id=47]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_2.png" type="Texture" id=33]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Bush.png" type="Texture" id=34]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_DryBush_4.png" type="Texture" id=35]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Entry_2.png" type="Texture" id=36]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Flower_1.png" type="Texture" id=37]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Entry_3.png" type="Texture" id=38]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Flower_3.png" type="Texture" id=39]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_Candle2.png" type="Texture" id=40]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Cave/Background/Cave_Background_Guide.png" type="Texture" id=41]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_2.png" type="Texture" id=42]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Trunk_Center2.png" type="Texture" id=43]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Details.png" type="Texture" id=44]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Entry_1.png" type="Texture" id=45]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_LoneTrunk.png" type="Texture" id=46]
+[ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_1.png" type="Texture" id=47]
 
-[sub_resource type="ConvexPolygonShape2D" id=56]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=57]
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0, 16, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 0, 16, 16, 0, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 16, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 16, 0, 0, 0, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=34]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+points = PoolVector2Array( 0, 6.76372, 15.8299, 6.76372, 16, 16, 0, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 5.85524, 16, 5.85524 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=53]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="TileSet" id=55]
 resource_local_to_scene = true
 0/name = "Grassland_Terrain_Tileset.png 0"
-0/texture = ExtResource( 7 )
+0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 272, 112 )
@@ -73,193 +166,193 @@ resource_local_to_scene = true
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 56 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 1, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 2, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 11, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 3, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 11, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 11, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 2, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 3, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 25 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 26 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 27 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 28 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 29 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 13, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 30 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 13, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 31 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 32 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 33 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 34 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 1, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 35 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 36 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 2, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 56 ),
+"shape": SubResource( 37 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 3/name = "Cave_Terrain_Tileset.png 3"
-3/texture = ExtResource( 5 )
+3/texture = ExtResource( 9 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 256, 112 )
@@ -280,7 +373,7 @@ resource_local_to_scene = true
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Dungeon_Terrain_Tileset.png 4"
-4/texture = ExtResource( 4 )
+4/texture = ExtResource( 10 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 256, 112 )
@@ -301,7 +394,7 @@ resource_local_to_scene = true
 4/shapes = [  ]
 4/z_index = 0
 5/name = "SnowLand_Terrain_Tileset.png 5"
-5/texture = ExtResource( 2 )
+5/texture = ExtResource( 8 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 272, 112 )
@@ -322,7 +415,7 @@ resource_local_to_scene = true
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Stronghold_Terrain_Tileset.png 6"
-6/texture = ExtResource( 3 )
+6/texture = ExtResource( 6 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 224, 112 )
@@ -343,7 +436,7 @@ resource_local_to_scene = true
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Desert_Terrain_Tileset.png 7"
-7/texture = ExtResource( 1 )
+7/texture = ExtResource( 7 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 272, 112 )
@@ -364,7 +457,7 @@ resource_local_to_scene = true
 7/shapes = [  ]
 7/z_index = 0
 8/name = "Dungeon_Details.png 8"
-8/texture = ExtResource( 27 )
+8/texture = ExtResource( 44 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 224, 64 )
@@ -385,7 +478,7 @@ resource_local_to_scene = true
 8/shapes = [  ]
 8/z_index = 0
 9/name = "Dungeon_BigTorch.png 9"
-9/texture = ExtResource( 36 )
+9/texture = ExtResource( 21 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 64, 48 )
@@ -406,7 +499,7 @@ resource_local_to_scene = true
 9/shapes = [  ]
 9/z_index = 0
 10/name = "Dungeon_Candle2.png 10"
-10/texture = ExtResource( 33 )
+10/texture = ExtResource( 40 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 64, 16 )
@@ -427,7 +520,7 @@ resource_local_to_scene = true
 10/shapes = [  ]
 10/z_index = 0
 11/name = "Dungeon_Candle1.png 11"
-11/texture = ExtResource( 41 )
+11/texture = ExtResource( 11 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 64, 16 )
@@ -448,7 +541,7 @@ resource_local_to_scene = true
 11/shapes = [  ]
 11/z_index = 0
 12/name = "Dungeon_SkullTorch.png 12"
-12/texture = ExtResource( 46 )
+12/texture = ExtResource( 20 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 80, 16 )
@@ -469,7 +562,7 @@ resource_local_to_scene = true
 12/shapes = [  ]
 12/z_index = 0
 13/name = "Dungeon_WallTorch.png 13"
-13/texture = ExtResource( 38 )
+13/texture = ExtResource( 18 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 0, 64, 16 )
@@ -490,7 +583,7 @@ resource_local_to_scene = true
 13/shapes = [  ]
 13/z_index = 0
 15/name = "GrassLand_WaterBubbles.png 15"
-15/texture = ExtResource( 17 )
+15/texture = ExtResource( 30 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 0, 80, 16 )
@@ -511,7 +604,7 @@ resource_local_to_scene = true
 15/shapes = [  ]
 15/z_index = 0
 16/name = "GrassLand_WaterSurfaceAnim.png 16"
-16/texture = ExtResource( 45 )
+16/texture = ExtResource( 16 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 0, 0, 160, 16 )
@@ -532,7 +625,7 @@ resource_local_to_scene = true
 16/shapes = [  ]
 16/z_index = 0
 17/name = "Cave_Details.png 17"
-17/texture = ExtResource( 47 )
+17/texture = ExtResource( 14 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 0, 0, 128, 48 )
@@ -553,7 +646,7 @@ resource_local_to_scene = true
 17/shapes = [  ]
 17/z_index = 0
 19/name = "SnowLand_Details.png 19"
-19/texture = ExtResource( 44 )
+19/texture = ExtResource( 13 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 0, 0, 144, 96 )
@@ -574,7 +667,7 @@ resource_local_to_scene = true
 19/shapes = [  ]
 19/z_index = 0
 20/name = "Stronghold_Details.png 20"
-20/texture = ExtResource( 42 )
+20/texture = ExtResource( 17 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 0, 192, 64 )
@@ -595,7 +688,7 @@ resource_local_to_scene = true
 20/shapes = [  ]
 20/z_index = 0
 21/name = "Desert_Details.png 21"
-21/texture = ExtResource( 37 )
+21/texture = ExtResource( 19 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 97, 2, 14, 30 )
@@ -616,7 +709,7 @@ resource_local_to_scene = true
 21/shapes = [  ]
 21/z_index = 0
 22/name = "Desert_Details.png 22"
-22/texture = ExtResource( 37 )
+22/texture = ExtResource( 19 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 112, 2, 17, 31 )
@@ -637,7 +730,7 @@ resource_local_to_scene = true
 22/shapes = [  ]
 22/z_index = 0
 23/name = "Desert_Details.png 23"
-23/texture = ExtResource( 37 )
+23/texture = ExtResource( 19 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 0, 32, 48 )
@@ -658,7 +751,7 @@ resource_local_to_scene = true
 23/shapes = [  ]
 23/z_index = 0
 24/name = "Desert_Details.png 24"
-24/texture = ExtResource( 37 )
+24/texture = ExtResource( 19 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 32, 0, 64, 16 )
@@ -679,7 +772,7 @@ resource_local_to_scene = true
 24/shapes = [  ]
 24/z_index = 0
 27/name = "Desert_Details.png 27"
-27/texture = ExtResource( 37 )
+27/texture = ExtResource( 19 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 32, 17, 64, 15 )
@@ -700,7 +793,7 @@ resource_local_to_scene = true
 27/shapes = [  ]
 27/z_index = 0
 29/name = "Desert_DryBush_4.png 29"
-29/texture = ExtResource( 22 )
+29/texture = ExtResource( 35 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 0, 16, 16 )
@@ -721,7 +814,7 @@ resource_local_to_scene = true
 29/shapes = [  ]
 29/z_index = 0
 30/name = "Desert_DryBush_3.png 30"
-30/texture = ExtResource( 16 )
+30/texture = ExtResource( 29 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 0, 0, 16, 16 )
@@ -742,7 +835,7 @@ resource_local_to_scene = true
 30/shapes = [  ]
 30/z_index = 0
 31/name = "Desert_DryBush_2.png 31"
-31/texture = ExtResource( 28 )
+31/texture = ExtResource( 33 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 0, 0, 16, 16 )
@@ -763,7 +856,7 @@ resource_local_to_scene = true
 31/shapes = [  ]
 31/z_index = 0
 32/name = "Desert_Sand.png 32"
-32/texture = ExtResource( 10 )
+32/texture = ExtResource( 3 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 0, 0, 16, 16 )
@@ -784,7 +877,7 @@ resource_local_to_scene = true
 32/shapes = [  ]
 32/z_index = 0
 33/name = "Desert_Cactus_3.png 33"
-33/texture = ExtResource( 13 )
+33/texture = ExtResource( 28 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 0, 0, 16, 32 )
@@ -805,7 +898,7 @@ resource_local_to_scene = true
 33/shapes = [  ]
 33/z_index = 0
 34/name = "Desert_Cactus_2.png 34"
-34/texture = ExtResource( 23 )
+34/texture = ExtResource( 42 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 0, 0, 16, 16 )
@@ -826,7 +919,7 @@ resource_local_to_scene = true
 34/shapes = [  ]
 34/z_index = 0
 35/name = "Desert_Cactus_1.png 35"
-35/texture = ExtResource( 20 )
+35/texture = ExtResource( 47 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 0, 0, 16, 16 )
@@ -847,7 +940,7 @@ resource_local_to_scene = true
 35/shapes = [  ]
 35/z_index = 0
 36/name = "Desert_DryBush_1.png 36"
-36/texture = ExtResource( 40 )
+36/texture = ExtResource( 22 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 0, 0, 16, 16 )
@@ -868,7 +961,7 @@ resource_local_to_scene = true
 36/shapes = [  ]
 36/z_index = 0
 37/name = "Desert_AnimalSkull.png 37"
-37/texture = ExtResource( 9 )
+37/texture = ExtResource( 5 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 0, 0, 16, 16 )
@@ -889,7 +982,7 @@ resource_local_to_scene = true
 37/shapes = [  ]
 37/z_index = 0
 38/name = "Desert_AnimalBones.png 38"
-38/texture = ExtResource( 12 )
+38/texture = ExtResource( 26 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 0, 0, 16, 16 )
@@ -910,7 +1003,7 @@ resource_local_to_scene = true
 38/shapes = [  ]
 38/z_index = 0
 39/name = "GrassLand_Details.png 39"
-39/texture = ExtResource( 14 )
+39/texture = ExtResource( 27 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 0, 0, 64, 80 )
@@ -931,7 +1024,7 @@ resource_local_to_scene = true
 39/shapes = [  ]
 39/z_index = 0
 40/name = "GrassLand_Details.png 40"
-40/texture = ExtResource( 14 )
+40/texture = ExtResource( 27 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 64, 0, 64, 16 )
@@ -952,7 +1045,7 @@ resource_local_to_scene = true
 40/shapes = [  ]
 40/z_index = 0
 42/name = "GrassLand_Details.png 42"
-42/texture = ExtResource( 14 )
+42/texture = ExtResource( 27 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 128, 16, 48, 16 )
@@ -973,7 +1066,7 @@ resource_local_to_scene = true
 42/shapes = [  ]
 42/z_index = 0
 43/name = "GrassLand_Bush.png 43"
-43/texture = ExtResource( 21 )
+43/texture = ExtResource( 34 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 0, 0, 16, 16 )
@@ -994,7 +1087,7 @@ resource_local_to_scene = true
 43/shapes = [  ]
 43/z_index = 0
 44/name = "GrassLand_Entry_1.png 44"
-44/texture = ExtResource( 29 )
+44/texture = ExtResource( 45 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 0, 0, 16, 32 )
@@ -1015,7 +1108,7 @@ resource_local_to_scene = true
 44/shapes = [  ]
 44/z_index = 0
 45/name = "GrassLand_Entry_2.png 45"
-45/texture = ExtResource( 30 )
+45/texture = ExtResource( 36 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 0, 0, 16, 32 )
@@ -1036,7 +1129,7 @@ resource_local_to_scene = true
 45/shapes = [  ]
 45/z_index = 0
 46/name = "GrassLand_Entry_3.png 46"
-46/texture = ExtResource( 19 )
+46/texture = ExtResource( 38 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 0, 0, 16, 32 )
@@ -1057,7 +1150,7 @@ resource_local_to_scene = true
 46/shapes = [  ]
 46/z_index = 0
 47/name = "GrassLand_Flower_1.png 47"
-47/texture = ExtResource( 24 )
+47/texture = ExtResource( 37 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 0, 0, 16, 16 )
@@ -1099,7 +1192,7 @@ resource_local_to_scene = true
 48/shapes = [  ]
 48/z_index = 0
 49/name = "GrassLand_Flower_3.png 49"
-49/texture = ExtResource( 26 )
+49/texture = ExtResource( 39 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 0, 0, 16, 16 )
@@ -1120,7 +1213,7 @@ resource_local_to_scene = true
 49/shapes = [  ]
 49/z_index = 0
 50/name = "GrassLand_GrassUp.png 50"
-50/texture = ExtResource( 11 )
+50/texture = ExtResource( 25 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
 50/region = Rect2( 0, 0, 16, 16 )
@@ -1141,7 +1234,7 @@ resource_local_to_scene = true
 50/shapes = [  ]
 50/z_index = 0
 51/name = "GrassLand_LoneTrunk.png 51"
-51/texture = ExtResource( 31 )
+51/texture = ExtResource( 46 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
 51/region = Rect2( 0, 0, 16, 16 )
@@ -1162,7 +1255,7 @@ resource_local_to_scene = true
 51/shapes = [  ]
 51/z_index = 0
 52/name = "GrassLand_TallGrass_1.png 52"
-52/texture = ExtResource( 8 )
+52/texture = ExtResource( 4 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
 52/region = Rect2( 0, 0, 16, 16 )
@@ -1183,7 +1276,7 @@ resource_local_to_scene = true
 52/shapes = [  ]
 52/z_index = 0
 53/name = "GrassLand_TallGrass_2.png 53"
-53/texture = ExtResource( 15 )
+53/texture = ExtResource( 23 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
 53/region = Rect2( 0, 0, 16, 16 )
@@ -1204,7 +1297,7 @@ resource_local_to_scene = true
 53/shapes = [  ]
 53/z_index = 0
 54/name = "GrassLand_Trunk_Center1.png 54"
-54/texture = ExtResource( 18 )
+54/texture = ExtResource( 24 )
 54/tex_offset = Vector2( 0, 0 )
 54/modulate = Color( 1, 1, 1, 1 )
 54/region = Rect2( 0, 0, 16, 16 )
@@ -1225,7 +1318,7 @@ resource_local_to_scene = true
 54/shapes = [  ]
 54/z_index = 0
 55/name = "GrassLand_Trunk_Left.png 55"
-55/texture = ExtResource( 39 )
+55/texture = ExtResource( 15 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 0, 0, 16, 16 )
@@ -1246,7 +1339,7 @@ resource_local_to_scene = true
 55/shapes = [  ]
 55/z_index = 0
 56/name = "GrassLand_Trunk_Center2.png 56"
-56/texture = ExtResource( 25 )
+56/texture = ExtResource( 43 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
 56/region = Rect2( 0, 0, 16, 16 )
@@ -1267,7 +1360,7 @@ resource_local_to_scene = true
 56/shapes = [  ]
 56/z_index = 0
 57/name = "Terrain_and_Props.png 57"
-57/texture = ExtResource( 6 )
+57/texture = ExtResource( 1 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
 57/region = Rect2( 0, 0, 320, 544 )
@@ -1283,31 +1376,31 @@ resource_local_to_scene = true
 57/navigation_offset = Vector2( 0, 0 )
 57/shape_offset = Vector2( 0, 0 )
 57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-57/shape = SubResource( 57 )
+57/shape = SubResource( 52 )
 57/shape_one_way = false
 57/shape_one_way_margin = 1.0
 57/shapes = [ {
 "autotile_coord": Vector2( 6, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 57 ),
+"shape": SubResource( 52 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 57 ),
+"shape": SubResource( 53 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 8, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 57 ),
+"shape": SubResource( 54 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 57/z_index = 0
 58/name = "Terrain-and-Props-OLD.png 58"
-58/texture = ExtResource( 43 )
+58/texture = ExtResource( 12 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 0, 0, 320, 544 )
@@ -1328,7 +1421,7 @@ resource_local_to_scene = true
 58/shapes = [  ]
 58/z_index = 0
 59/name = "Terrain_and_Props.png 59"
-59/texture = ExtResource( 6 )
+59/texture = ExtResource( 1 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 288, 160, 15, 16 )
@@ -1349,7 +1442,7 @@ resource_local_to_scene = true
 59/shapes = [  ]
 59/z_index = 0
 60/name = "Dungeon_Details.png 60"
-60/texture = ExtResource( 27 )
+60/texture = ExtResource( 44 )
 60/tex_offset = Vector2( 0, 0 )
 60/modulate = Color( 1, 1, 1, 1 )
 60/region = Rect2( 190, 0, 16, 48 )
@@ -1369,6 +1462,27 @@ resource_local_to_scene = true
 60/shape_one_way_margin = 0.0
 60/shapes = [  ]
 60/z_index = 0
+61/name = "SnowLand_Terrain_Tileset.png 61"
+61/texture = ExtResource( 8 )
+61/tex_offset = Vector2( 0, 0 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( -15, 0, 304, 128 )
+61/tile_mode = 2
+61/autotile/icon_coordinate = Vector2( 0, 0 )
+61/autotile/tile_size = Vector2( 16, 16 )
+61/autotile/spacing = 0
+61/autotile/occluder_map = [  ]
+61/autotile/navpoly_map = [  ]
+61/autotile/priority_map = [  ]
+61/autotile/z_index_map = [  ]
+61/occluder_offset = Vector2( 0, 0 )
+61/navigation_offset = Vector2( 0, 0 )
+61/shape_offset = Vector2( 0, 0 )
+61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+61/shape_one_way = false
+61/shape_one_way_margin = 0.0
+61/shapes = [  ]
+61/z_index = 0
 
 [node name="Node2D" type="Node2D"]
 
@@ -1378,7 +1492,7 @@ tile_set = SubResource( 55 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
-tile_data = PoolIntArray( -2555903, 3, 131073, -2555902, 3, 131073, -2555901, 3, 131073, -2555900, 3, 131073, -2555899, 3, 131073, -2555898, 3, 131073, -2555897, 3, 131073, -2555896, 3, 131073, -2555895, 3, 131073, -2555894, 3, 131073, -2555893, 3, 131073, -2555892, 3, 131073, -2555891, 3, 131073, -2555890, 3, 131073, -2555889, 3, 131073, -2555888, 3, 131073, -2555887, 3, 131073, -2555886, 3, 131073, -2555849, 60, 65536, -2555838, 60, 65536, -2490367, 3, 131073, -2490366, 3, 131073, -2490365, 3, 131073, -2490364, 3, 131073, -2490363, 3, 131073, -2490362, 3, 131073, -2490361, 3, 131073, -2490360, 3, 131073, -2490359, 3, 131073, -2490358, 3, 131073, -2490357, 3, 131073, -2490356, 3, 131073, -2490355, 3, 131073, -2490354, 3, 131073, -2490352, 3, 131073, -2490351, 3, 131073, -2490313, 60, 65536, -2490302, 60, 65536, -2424831, 3, 131073, -2424830, 3, 131073, -2424827, 3, 131073, -2424826, 3, 131073, -2424825, 3, 131073, -2424824, 3, 131073, -2424823, 3, 131073, -2424822, 3, 131073, -2424821, 3, 131073, -2424820, 3, 131073, -2424817, 3, 131073, -2424816, 3, 131073, -2424815, 8, 65548, -2424777, 60, 65536, -2424766, 60, 65536, -2359295, 3, 131073, -2359294, 3, 131073, -2359293, 3, 131073, -2359292, 3, 131073, -2359291, 3, 131073, -2359290, 3, 131073, -2359289, 3, 131073, -2359288, 3, 131073, -2359287, 3, 131073, -2359286, 3, 131073, -2359285, 3, 131073, -2359284, 3, 131073, -2359283, 3, 131073, -2359282, 3, 131073, -2359281, 3, 131073, -2359280, 17, 4, -2359279, 8, 65548, -2359241, 60, 65536, -2359230, 60, 65536, -2293759, 3, 131073, -2293758, 3, 131073, -2293757, 3, 131073, -2293756, 3, 131073, -2293755, 3, 131073, -2293754, 3, 131073, -2293753, 3, 131073, -2293752, 3, 131073, -2293751, 3, 131073, -2293750, 3, 131073, -2293749, 3, 131073, -2293748, 3, 131073, -2293747, 3, 131073, -2293746, 3, 131073, -2293745, 1610612753, 0, -2293743, 8, 65548, -2293705, 60, 65536, -2293694, 60, 131072, -2228223, 3, 131073, -2228222, 3, 131073, -2228221, 3, 131073, -2228220, 3, 131073, -2228219, 3, 131073, -2228218, 3, 131073, -2228217, 3, 131073, -2228216, 3, 131073, -2228215, 3, 131073, -2228214, 3, 131073, -2228213, 3, 131073, -2228212, 3, 131073, -2228211, 3, 131073, -2228210, 1610612753, 1, -2228207, 8, 65548, -2228169, 60, 65536, -2162682, 17, 5, -2162675, 1610612753, 1, -2162671, 8, 65548, -2162633, 60, 65536, -2097152, -1073741816, 131085, -2097150, 17, 6, -2097149, 8, 65548, -2097148, 17, 5, -2097147, 17, 6, -2097146, 17, 5, -2097145, 17, 4, -2097143, 8, 13, -2097142, 17, 4, -2097140, 17, 5, -2097097, 60, 65536, -2031613, 8, 65548, -2031561, 60, 65536, -1966077, 8, 65548, -1966049, 17, 1, -1966046, 17, 65540, -1966045, 17, 65542, -1966025, 60, 65536, -1900541, 8, 65548, -1900514, -1610612733, 131082, -1900489, 60, 65536, -1835005, 8, 65548, -1834978, 1073741827, 131073, -1834977, 1073741827, 131073, -1834976, 1073741827, 131074, -1834975, 1073741827, 131073, -1834974, 1073741827, 131073, -1834973, 1073741827, 131073, -1834972, 1073741827, 131073, -1834962, 9, 1, -1834953, 60, 131072, -1769443, 1073741827, 131073, -1769442, 1073741827, 131073, -1769441, 1073741827, 131073, -1769440, 1073741827, 131073, -1769439, 1073741827, 131073, -1769438, 1073741827, 131073, -1769437, 1073741827, 131073, -1769436, 1073741827, 131073, -1769435, 1073741827, 131073, -1769434, -2147483645, 196611, -1769433, 1610612744, 13, -1769425, 3, 196609, -1769424, 3, 196609, -1769423, 3, 196609, -1703936, 9, 3, -1703908, 1073741827, 131073, -1703907, 1073741827, 131073, -1703906, -1610612733, 131082, -1703905, 1073741827, 131073, -1703904, 1073741827, 131073, -1703903, 1073741827, 131073, -1703902, 1073741827, 131073, -1703901, 1073741827, 131073, -1703900, 1073741827, 131073, -1703899, 1073741827, 131073, -1703898, 1073741827, 131073, -1703897, 1073741827, 131073, -1703896, 17, 65541, -1638374, 1610612744, 13, -1638373, -1610612733, 65536, -1638371, -1610612733, 65536, -1638370, -1610612733, 65536, -1638369, -1610612733, 65536, -1638368, -1610612733, 65536, -1638367, -1610612733, 65536, -1638366, -1610612733, 65536, -1638365, -1610612733, 65536, -1638364, -1610612733, 65536, -1638363, -1610612733, 65536, -1638362, -1610612733, 65536, -1638361, -1610612733, 65536, -1638360, -1610612733, 65536, -1572864, 3, 131073, -1572863, 3, 131073, -1572862, 3, 131073, -1572861, 3, 131073, -1572860, 3, 131073, -1572859, 3, 131073, -1572858, 3, 131073, -1572837, 3, 131073, -1572836, 3, 131073, -1572835, 3, 131073, -1572834, 3, 131073, -1572833, 3, 131073, -1572832, 3, 131073, -1572831, 3, 131073, -1572830, 3, 131073, -1572829, 3, 131073, -1572828, 3, 131073, -1572827, 3, 131073, -1572826, 3, 131074, -1572825, 3, 131073, -1572824, 3, 131073, -1572823, 1610612739, 65536, -1507328, 3, 131073, -1507327, 3, 131073, -1507326, 3, 131073, -1507325, 3, 131073, -1507324, 3, 131073, -1507323, 3, 131073, -1507322, 3, 131073, -1507321, 3, 131073, -1507302, 3, 65536, -1507301, 3, 131073, -1507300, 3, 131074, -1507299, 3, 131073, -1507298, 3, 131073, -1507297, 3, 131073, -1507296, 3, 131073, -1507295, 3, 131073, -1507294, 3, 131073, -1507293, 3, 131073, -1507292, 3, 131073, -1507291, 3, 131073, -1507290, 3, 131073, -1507289, 3, 131074, -1507288, 3, 131073, -1507287, 1610612739, 65536, -1441787, 3, 131073, -1441786, 3, 131073, -1441785, 3, 131073, -1441784, 3, 131073, -1441750, -1610612719, 131073, -1376251, 3, 131073, -1376250, 3, 131073, -1376249, 3, 131073, -1376248, 3, 131073, -1376247, 3, 131073, -1376230, 1610612753, 131073, -1376228, 17, 4, -1376223, 17, 6, -1376221, 1610612753, 131072, -1376215, 8, 13, -1310653, 9, 0, -1245167, 17, 65543, -1245166, 9, 2, -1245118, 3, 131073, -1245117, 3, 131073, -1245116, 3, 131073, -1179636, 3, 131073, -1179634, 3, 131073, -1179631, 3, 131073, -1179630, 3, 196609, -1179629, 3, 196609, -1179628, 3, 196609, -1179582, 3, 131073, -1179581, 3, 131073, -1179580, 3, 131073, -1114101, -1610612733, 393226, -1114099, 8, 11, -1114097, -1073741821, 393226, -1114095, 3, 131073, -1114094, 1610612739, 196609, -1114093, 1610612739, 196609, -1114092, 1610612739, 196609, -1114055, 3, 196609, -1114054, 3, 196609, -1114053, 3, 196609, -1114046, 3, 131073, -1114045, 3, 131073, -1114044, 3, 131073, -1048565, -1610612733, 393226, -1048563, 8, 65548, -1048561, -1073741821, 393226, -1048559, 17, 5, -1048557, 17, 4, -1048510, 3, 131073, -1048509, 3, 131073, -1048508, 3, 131073, -983029, -1610612733, 393226, -983027, 8, 65548, -983025, -1073741821, 393226, -982991, 9, 0, -917493, -1610612733, 393226, -917491, 8, 65548, -917489, -1073741821, 393226, -851966, 17, 65540, -851965, 9, 1, -851961, 17, 65541, -851957, -1610612733, 393226, -851955, 8, 65548, -851953, -1073741821, 393226, -851920, 3, 131073, -851919, 3, 131073, -786421, -1610612733, 393226, -786419, 8, 65548, -786417, -1073741821, 393226, -786406, 1610612744, 13, -786386, -1610612728, 131085, -786384, 3, 131073, -786383, 3, 131073, -720896, 3, 131073, -720895, 3, 131073, -720894, 3, 131073, -720893, 3, 131073, -720892, 3, 131073, -720891, 3, 131073, -720890, 3, 131073, -720889, 3, 131073, -720888, 3, 131073, -720887, 3, 131073, -720885, -1610612733, 393226, -720883, 8, 65548, -720881, -1073741821, 393226, -720848, 3, 131073, -720847, 3, 131073, -655360, 3, 131073, -655359, 3, 131073, -655358, 3, 131073, -655357, 3, 131073, -655356, 3, 131073, -655355, 3, 131073, -655354, 3, 131073, -655353, 3, 131073, -655352, 3, 131073, -655351, 3, 131073, -655349, -1610612733, 393226, -655347, 8, 65548, -655345, -1073741821, 393226, -655334, 3, 131073, -655333, 3, 131073, -655332, 3, 131073, -655331, 3, 131073, -655330, 3, 131073, -655329, 3, 131073, -655328, 3, 131073, -655327, 3, 131073, -655326, 3, 131073, -655325, 3, 131073, -655324, 3, 131073, -655323, 3, 131073, -655322, 3, 131073, -655321, 3, 131073, -655320, 3, 131073, -655319, 3, 131073, -655318, 3, 131073, -655317, 3, 131073, -655316, 3, 131073, -655315, 3, 131073, -655314, 3, 131073, -655313, 3, 131073, -655312, 3, 131073, -655311, 3, 131073, -655310, 3, 131073, -655309, 3, 131073, -655308, 3, 131073, -655307, 3, 131073, -655306, 3, 131073, -655305, 3, 131073, -655304, 3, 131073, -655303, 3, 131073, -655302, 3, 131073, -655301, 3, 131073, -655300, 3, 131073, -655299, 3, 131073, -655298, 3, 131073, -655297, 3, 131073, -655296, 3, 131073, -655295, 3, 131073, -655294, 3, 131073, -655293, 3, 131073, -589824, 3, 131073, -589823, 3, 131073, -589822, 3, 131073, -589821, 3, 131073, -589820, 3, 131073, -589819, 3, 131073, -589818, 3, 131073, -589817, 3, 131073, -589816, 3, 131073, -589815, 3, 131073, -589813, -1610612733, 393226, -589811, 8, 65548, -589809, -1073741821, 393226, -589808, 3, 131073, -589807, 3, 131073, -589806, 3, 131073, -589805, 3, 131073, -589804, 3, 131073, -589803, 3, 131073, -589802, 3, 131073, -589801, 3, 131073, -589800, 3, 131073, -589798, 3, 131073, -589797, 3, 131073, -589796, 3, 131073, -589795, 3, 131073, -589794, 3, 131073, -589793, 3, 131073, -589792, 3, 131073, -589791, 3, 131073, -589790, 3, 131073, -589789, 3, 131073, -589788, 3, 131073, -589787, 3, 131073, -589786, 3, 131073, -589785, 3, 131073, -589784, 3, 131073, -589783, 3, 131073, -589782, 3, 131073, -589781, 3, 131073, -589780, 3, 131073, -589779, 3, 131073, -589778, 3, 131073, -589777, 3, 131073, -589776, 3, 131073, -589775, 3, 131073, -589774, 3, 131073, -589773, 3, 131073, -589772, 3, 131073, -589771, 3, 131073, -589770, 3, 131073, -589769, 3, 131073, -589768, 3, 131073, -589767, 3, 131073, -589766, 3, 131073, -589765, 3, 131073, -589764, 3, 131073, -589763, 3, 131073, -589762, 3, 131073, -589761, 3, 131073, -589760, 3, 131073, -589759, 3, 131073, -589758, 3, 131073, -589757, 3, 131073, -524288, 3, 131073, -524287, 3, 131073, -524286, 3, 131073, -524285, 3, 131073, -524284, 3, 131073, -524283, 3, 131073, -524282, 3, 131073, -524281, 3, 131073, -524280, 3, 131073, -524279, 3, 131073, -524277, -1610612733, 393226, -524275, 8, 65548, -524273, -1073741821, 393226, -524272, 3, 131073, -524271, 3, 131073, -524270, 3, 131073, -524269, 3, 131073, -524268, 3, 131073, -524267, 3, 131073, -524266, 3, 131073, -524265, 3, 131073, -524264, 3, 131073, -524262, 3, 131073, -524261, 3, 131073, -524260, 3, 131073, -524259, 3, 131073, -524258, 3, 131073, -524257, 3, 131073, -524256, 3, 131073, -524255, 3, 131073, -524254, 3, 131073, -524253, 3, 131073, -524252, 3, 131073, -524251, 3, 131073, -524250, 3, 131073, -524249, 3, 131073, -524248, 3, 131073, -524247, 3, 131073, -524246, 3, 131073, -524245, 3, 131073, -524244, 3, 131073, -524243, 3, 131073, -524242, 3, 131073, -524241, 3, 131073, -524240, 3, 131073, -524239, 3, 131073, -524238, 3, 131073, -524237, 3, 131073, -524236, 3, 131073, -524235, 3, 131073, -524234, 3, 131073, -524233, 3, 131073, -524232, 3, 131073, -524231, 3, 131073, -524230, 3, 131073, -524229, 3, 131073, -524228, 3, 131073, -524227, 3, 131073, -524226, 3, 131073, -524225, 3, 131073, -524224, 3, 131073, -524223, 3, 131073, -524222, 3, 131073, -524221, 3, 131073 )
+tile_data = PoolIntArray( -786431, 19, 262149, -786428, 19, 327680, -786427, 19, 327683, -655360, 5, 327694, -655359, 5, 327694, -655358, 5, 327694, -655357, 5, 327694, -655356, 5, 327694, -655355, 5, 327694, -655354, 5, 327694, -655350, 0, 65537, -589824, 5, 327694, -589823, 5, 327694, -589822, 5, 327694, -589821, 5, 327694, -589820, 5, 327694, -589819, 5, 327694, -589818, 5, 327694, -524288, 5, 327694, -524287, 5, 327694, -524286, 5, 327694, -524285, 5, 327694, -524284, 5, 327694, -524283, 5, 327694, -524282, 5, 327694 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 5, 144 )
@@ -1386,18 +1500,19 @@ tile_set = SubResource( 55 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
-tile_data = PoolIntArray( -2555904, 3, 131072, -2555903, -1610612728, 65549, -2555899, 3, 131074, -2555888, 1610612753, 131075, -2555886, 3, 10, -2555885, 3, 196610, -2555884, 3, 196610, -2555883, 3, 196610, -2555882, 3, 196610, -2555881, 3, 196610, -2555880, 3, 196610, -2555879, 3, 196610, -2555878, 3, 196610, -2555877, 3, 196610, -2555876, 3, 196610, -2555875, 3, 196610, -2555874, 3, 196610, -2555873, 3, 196610, -2555872, 3, 196610, -2555871, 3, 196610, -2555870, 3, 196610, -2555869, 3, 196610, -2555868, 3, 196610, -2555867, 3, 196610, -2555866, 3, 196610, -2555865, 3, 196610, -2555864, 3, 196610, -2555863, 3, 196610, -2555862, 3, 196610, -2555861, 3, 196610, -2555860, 3, 196610, -2555859, 3, 196610, -2555858, 3, 196610, -2555857, 3, 196610, -2555856, 3, 196610, -2555855, 3, 196610, -2555854, 3, 196610, -2555853, 3, 196610, -2555852, 3, 196610, -2555851, 3, 196610, -2555850, 3, 196610, -2555849, 3, 196610, -2555848, 3, 196610, -2555847, 3, 196610, -2555846, 3, 196610, -2555845, 3, 196610, -2555844, 3, 196610, -2555843, 3, 196610, -2555842, 3, 196610, -2555841, 3, 196610, -2555840, 3, 196610, -2555839, 3, 196610, -2555838, 3, 196610, -2555837, 3, 196610, -2490368, 3, 131072, -2490367, 1610612753, 131075, -2490357, 3, 131074, -2490351, 3, 10, -2490350, 3, 65546, -2424832, 3, 131072, -2424829, 44, 0, -2424816, 3, 10, -2424815, 3, 65546, -2359296, 3, 131072, -2359288, 1610612753, 131077, -2359283, 3, 131074, -2359281, 3, 10, -2359280, 3, 65546, -2293760, 3, 131072, -2293758, 3, 131074, -2293746, 3, 10, -2293745, 3, 65546, -2228224, 3, 131072, -2228218, 44, 0, -2228211, 3, 10, -2228210, 3, 65546, -2162688, 3, 196608, -2162687, 3, 196610, -2162686, 3, 196610, -2162685, 3, 196610, -2162684, 3, 196610, -2162683, 3, 196610, -2162682, 3, 196610, -2162681, 3, 196610, -2162680, 3, 196610, -2162679, 3, 196610, -2162678, 3, 196610, -2162677, 3, 196610, -2162676, 3, 196610, -2162675, 3, 65546, -2097151, 1610612753, 131073, -2097142, 1610612753, 131072, -1900514, -1610612733, 196608, -1900513, -1610612733, 131072, -1900512, -1610612733, 131072, -1900511, -1610612733, 131072, -1900510, -1610612733, 131072, -1900509, -1610612733, 131072, -1900508, -1073741821, 196611, -1900507, 3, 8, -1834979, -1073741821, 8, -1834978, -536870909, 10, -1834972, 17, 65543, -1834971, -536870909, 327681, -1834970, 3, 8, -1769444, -1073741821, 8, -1769443, 1073741827, 393222, -1769442, 1610612739, 65548, -1769441, 1610612739, 65548, -1769440, 1610612739, 65548, -1769439, 1610612739, 65548, -1769438, 1610612739, 65548, -1769437, 1610612739, 65548, -1769435, 1610612739, 65548, -1769434, 1073741827, 393223, -1769433, 3, 8, -1769426, 3, 262144, -1769425, 3, 65548, -1769424, 3, 65548, -1769423, 3, 65548, -1769422, 3, 262146, -1703909, -1073741821, 8, -1703908, 1073741827, 393225, -1703907, 1073741827, 393225, -1703906, 1073741827, 393226, -1703905, 1073741827, 393227, -1703904, -2147483645, 327689, -1703903, -2147483645, 327691, -1703902, 1073741827, 393226, -1703901, 1073741827, 393229, -1703900, 1073741827, 393226, -1703899, 536870915, 196623, -1703898, 536870915, 196618, -1703897, 536870915, 327689, -1703896, 3, 8, -1638400, 3, 2, -1638399, 3, 65538, -1638398, 3, 1, -1638397, 3, 1, -1638396, 3, 1, -1638395, 3, 1, -1638394, 3, 8, -1638374, -1073741821, 8, -1638373, -1610612733, 8, -1638372, -1610612733, 131072, -1638371, -1610612733, 131072, -1638370, -1610612733, 131072, -1638369, -1610612733, 131072, -1638368, -1610612733, 131072, -1638367, -1610612733, 131072, -1638366, -1610612733, 131072, -1638365, -1610612733, 131072, -1638364, -1610612733, 131072, -1638363, -1610612733, 131072, -1638362, -1610612733, 131072, -1638361, -1610612733, 131072, -1638360, 1610612739, 8, -1638359, 3, 8, -1572858, 3, 65544, -1572857, 3, 8, -1572838, 3, 131072, -1572837, 17, 131077, -1572828, 1610612780, 0, -1572823, 1610612739, 131072, -1507326, 44, 0, -1507321, 3, 65544, -1507320, 3, 8, -1507302, 3, 131072, -1507297, 17, 65539, -1507290, 17, 131075, -1507287, 1610612739, 131072, -1441792, 1610612739, 2, -1441791, 1610612739, 2, -1441790, 1073741827, 65538, -1441789, 1610612739, 1, -1441788, 1610612739, 65544, -1441784, 3, 65544, -1441783, 3, 8, -1441782, 8, 196613, -1441766, 3, 196608, -1441765, 3, 196609, -1441764, 3, 196610, -1441763, 3, 196610, -1441762, 3, 196610, -1441761, 3, 196610, -1441760, 3, 196610, -1441759, 3, 196610, -1441758, 3, 196610, -1441757, 3, 196610, -1441756, 3, 196610, -1441755, 3, 196610, -1441754, 3, 196610, -1441753, 3, 196610, -1441752, 3, 196610, -1441751, 3, 196611, -1376256, 1610612747, 3, -1376252, -1073741821, 1, -1376247, 3, 65544, -1376246, 3, 1, -1376245, 3, 1, -1376244, 3, 8, -1376217, 1610612747, 0, -1310716, 3, 196608, -1310715, 3, 196610, -1310714, 3, 196610, -1310713, 3, 196610, -1310712, 3, 196610, -1310711, 3, 196610, -1310710, 3, 196610, -1310709, 3, 196610, -1310708, 536870915, 196608, -1245178, 1610612747, 3, -1245173, 1610612739, 393227, -1245172, 1610612739, 393226, -1245171, 1610612739, 393226, -1245170, 1610612739, 393226, -1245169, -1073741821, 393227, -1245119, 3, 393222, -1245118, 3, 65537, -1245117, 3, 2, -1245116, 3, 65538, -1245115, 536870915, 393222, -1179637, -1610612733, 393226, -1179636, 536870915, 393226, -1179635, 536870915, 393226, -1179634, 536870915, 393226, -1179633, -1073741821, 393226, -1179631, 3, 262144, -1179630, 3, 65548, -1179629, 3, 65548, -1179628, 3, 65548, -1179627, 3, 262146, -1179590, 17, 65543, -1179583, 3, 131072, -1179579, 1610612739, 131072, -1114100, -1073741821, 393226, -1114098, -1610612733, 393226, -1114095, 1073741827, 262144, -1114094, 1610612739, 65548, -1114093, 1610612739, 65548, -1114092, 1610612739, 65548, -1114091, 1610612739, 262144, -1114056, 3, 262144, -1114055, 3, 65548, -1114054, 3, 65548, -1114053, 3, 65548, -1114052, 3, 262146, -1114047, 3, 131072, -1114046, -1610612692, 0, -1114043, 1610612739, 131072, -1048564, -1073741821, 393226, -1048562, -1610612733, 393226, -1048519, 1610612747, 3, -1048511, 3, 131072, -1048508, -1073741807, 0, -1048507, 1610612739, 131072, -983028, -1073741821, 393226, -983026, -1610612733, 393226, -982975, 3, 327686, -982974, 3, 262147, -982973, 3, 262147, -982972, 3, 262147, -982971, 536870915, 327686, -917492, -1073741821, 393226, -917490, -1610612733, 393226, -917457, -1073741821, 3, -917456, -1610612733, 131072, -917455, -1610612733, 131072, -917454, 3, 3, -917438, 1610612753, 131073, -851959, -1610612713, 65536, -851956, -1073741821, 393226, -851954, -1610612733, 393226, -851921, 3, 131072, -851920, 17, 131074, -851918, 1610612739, 131072, -786432, -1610612733, 131072, -786431, -1610612733, 131072, -786430, 3, 65537, -786429, 3, 65538, -786428, -1610612733, 131072, -786427, 3, 65537, -786426, 3, 2, -786425, 3, 65538, -786424, -1610612733, 131072, -786423, -1610612733, 131072, -786422, -1610612733, 0, -786420, -1073741821, 393226, -786418, -1610612733, 393226, -786398, 37, 0, -786387, 23, 0, -786385, 3, 131072, -786383, -1073741780, 0, -786382, 1610612739, 131072, -786381, 17, 65543, -786377, 17, 131073, -786366, 23, 0, -720887, -1073741780, 0, -720886, 1610612739, 131072, -720884, -1073741821, 393226, -720882, -1610612733, 393226, -720871, 3, 0, -720870, -1610612733, 131072, -720869, -1610612733, 131072, -720868, -1610612733, 131072, -720867, 3, 65537, -720866, 3, 2, -720865, 3, 2, -720864, 3, 2, -720863, 3, 2, -720862, 3, 65538, -720861, -1610612733, 131072, -720860, -1610612733, 131072, -720859, -1610612733, 131072, -720858, -1610612733, 131072, -720857, -1610612733, 131072, -720856, -1610612733, 131072, -720855, -1610612733, 131072, -720854, 3, 65537, -720853, 3, 65538, -720852, -1610612733, 131072, -720851, -1610612733, 131072, -720850, -1610612733, 131072, -720849, -1073741821, 327681, -720846, 3, 327681, -720845, -1610612733, 131072, -720844, -1610612733, 131072, -720843, -1610612733, 131072, -720842, -1610612733, 131072, -720841, -1610612733, 131072, -720840, -1610612733, 131072, -720839, -1610612733, 131072, -720838, 3, 65537, -720837, 3, 65538, -720836, -1610612733, 131072, -720835, -1610612733, 131072, -720834, -1610612733, 131072, -720833, -1610612733, 131072, -720832, -1610612733, 131072, -720831, -1610612733, 131072, -720830, -1610612733, 131072, -720829, -1610612733, 131072, -720828, -1610612733, 0, -655360, -1610612692, 0, -655350, 1610612739, 131072, -655349, -1073741816, 13, -655348, -1073741821, 393226, -655346, -1610612733, 393226, -655344, 1610612739, 393226, -655343, 1610612739, 393226, -655342, 1610612739, 393226, -655341, 1610612739, 393226, -655340, 1610612739, 393226, -655339, 1610612739, 393226, -655338, 1610612739, 393226, -655337, 1610612739, 393226, -655336, 1610612739, 393226, -655335, 3, 131072, -655323, 1610612780, 0, -655317, 17, 131077, -655295, 1610612780, 0, -655292, 1610612739, 131072, -589814, 1610612739, 131072, -589812, -1073741821, 393226, -589810, -1610612733, 393226, -589808, 3, 327690, -589807, 3, 262153, -589806, 3, 262154, -589805, 3, 262155, -589804, 3, 262156, -589803, 3, 262157, -589802, 3, 262157, -589801, 3, 262159, -589800, 3, 327689, -589799, 3, 131072, -589756, 1610612739, 131072, -524278, 1610612739, 131072, -524276, -1073741821, 393226, -524274, -1610612733, 393226, -524272, 3, 393225, -524271, 1610612739, 262153, -524270, 1610612739, 262154, -524269, 1610612739, 262155, -524268, 1610612739, 262156, -524267, 1610612739, 262157, -524266, 1610612739, 262158, -524265, 3, 262158, -524264, 3, 262153, -524263, 3, 131072, -524262, -1610612692, 0, -524220, 1610612739, 131072 )
+tile_data = PoolIntArray( -720896, 5, 262157, -720895, 5, 262157, -720894, 5, 262157, -720893, 5, 262157, -720892, 5, 262157, -720891, 5, 262157, -720890, 5, 262157, -720889, 5, 262158, -655360, -1610612731, 262153, -655359, -1610612731, 262153, -655358, -1610612731, 262153, -655357, -1610612731, 262153, -655356, -1610612731, 262153, -655355, -1610612731, 262153, -655354, -1610612731, 262153, -655353, 5, 262155, -589824, -1610612731, 262153, -589823, -1610612731, 262153, -589822, -1610612731, 262153, -589821, -1610612731, 262153, -589820, -1610612731, 262153, -589819, -1610612731, 262153, -589818, -1610612731, 262153, -589817, 5, 262155, -524288, -1610612731, 262153, -524287, -1610612731, 262153, -524286, -1610612731, 262153, -524285, -1610612731, 262153, -524284, -1610612731, 262153, -524283, -1610612731, 262153, -524282, -1610612731, 262153, -524281, 5, 262155 )
 
 [node name="Sprite" type="Sprite" parent="."]
 show_behind_parent = true
 position = Vector2( 549.063, -223 )
 scale = Vector2( 2.95686, 2.42307 )
-texture = ExtResource( 35 )
+texture = ExtResource( 31 )
 
 [node name="Cave bg" type="Sprite" parent="Sprite"]
+visible = false
 position = Vector2( 0.993277, -0.254269 )
 scale = Vector2( 1.00448, 1.00244 )
-texture = ExtResource( 34 )
+texture = ExtResource( 41 )
 
 [node name="TileMapabove" type="TileMap" parent="."]
 position = Vector2( 5, 144 )
@@ -1406,4 +1521,3 @@ cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 15
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
-tile_data = PoolIntArray( -1769436, 1610612739, 65548, -1703908, -1610612733, 8, -1703897, 1610612739, 8, -1114099, 1610612753, 131072, -1048561, 17, 131075, -851956, 17, 65538, -655349, 3, 8, -589813, 17, 131075, -524273, 1610612753, 65536 )
