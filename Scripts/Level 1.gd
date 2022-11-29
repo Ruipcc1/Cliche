@@ -8,6 +8,7 @@ var allNodes
 func _ready():
 	enemies = get_tree().get_nodes_in_group("Enemy").count(KinematicBody2D)
 	
+	
 
 func _process(delta):
 	enemies = get_tree().get_nodes_in_group("Enemy").size()

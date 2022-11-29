@@ -25,6 +25,8 @@ var knockback = 70
 var knockup = 100
 var _HitRight
 
+var healthBarNode
+
 onready var attackArea = get_node("WeaponArea")
 onready var playerWeapon = get_node("WeaponArea/Weapon")
 onready var hitBoxColl = get_node("HitBox/Collider")
@@ -46,6 +48,9 @@ func _ready():
 	CurrentLevel = PlayerStats._CurrentLevel
 	BombDamage = PlayerStats._BombDamage
 	
+	healthBarNode = get_node("../CanvasLayer/TextureProgress")
+	
+	healthBarNode.value = CurrentHealth
 	pass
 
 func _physics_process(delta):
@@ -207,6 +212,8 @@ func _receiveDamagePlayer(Damage, HitRight):
 	_HitRight = HitRight
 	PlayerCurrentState = Hit
 	
+	healthBarNode.value = CurrentHealth
+	
 func _LevelUp():
 	CurrentLevel += 1
 	PlayerStats._CurrentLevel = CurrentLevel
@@ -233,5 +240,6 @@ func _LevelUp():
 			bomb.transform = $".".transform
 			get_parent().add_child(bomb)
 			
+	healthBarNode.value = CurrentHealth
 		
 	
