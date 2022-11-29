@@ -185,7 +185,13 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Landing":
 		PlayerCurrentState = Ground
 	if anim_name == "Dead":
-		get_tree().reload_current_scene()
+		PlayerStats._CurrentLevel = PlayerStats.baseLevel
+		PlayerStats._Damage = PlayerStats.baseDamage
+		PlayerStats._MaxHealth = PlayerStats.baseHealth
+		PlayerStats._Speed = PlayerStats.baseSpeed
+		PlayerStats._BombDamage = PlayerStats.baseBomb
+		
+		get_tree().change_scene("res://Levels/Start Menu.tscn")
 	if anim_name == "Hit":
 		if is_on_floor():
 			PlayerCurrentState = Ground

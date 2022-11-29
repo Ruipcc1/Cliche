@@ -1,7 +1,7 @@
 extends "res://Scripts/Character.gd"
 
 func _ready():
-	defaultAnimName = "hound chill"
+	self.set_meta("type", "enemy")
 	hitAnimName = "Hit"
 	deadAnimName = "Dead"
 	

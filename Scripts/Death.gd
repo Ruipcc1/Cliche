@@ -25,6 +25,7 @@ var DeathState = Float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.add_to_group("Enemy")
 	rng.randomize()
 	moveDirCountDown = moveDirSetTimer
 	defaultAnimName = "Float"
@@ -168,6 +169,8 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == hitAnimName:
 		DeathState = Float
 	if anim_name == deadAnimName:
+		self.remove_from_group("Enemy")
+		$".."._enemyDied()
 		queue_free()
 
 func _receiveDamage(Hit):

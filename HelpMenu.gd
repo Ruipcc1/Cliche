@@ -1,19 +1,5 @@
-extends Node
+extends Control
 
-export var _MaxHealth = 10
-export var _Speed = 70
-export var _Damage = 10
-
-enum {Friendship, Rage, Wisdom}
-var _CurrentLevel = 1
-var _CurrentClass = Friendship
-var _BombDamage = 10
-
-var baseHealth = 10
-var baseSpeed = 70
-var baseDamage = 10
-var baseLevel = 1
-var baseBomb = 10
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -28,3 +14,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_pressed():
+	queue_free()

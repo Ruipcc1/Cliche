@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Cliche"
-run/main_scene="res://Levels/Level 1.tscn"
+run/main_scene="res://Levels/Start Menu.tscn"
 
 [autoload]
 
