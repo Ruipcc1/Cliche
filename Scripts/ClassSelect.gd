@@ -16,14 +16,14 @@ func _ready():
 
 func _on_Friendship_pressed():
 	PlayerStats._CurrentClass = Friendship
-	get_tree().change_scene("res://Levels/Level 1.tscn")
+	get_tree().change_scene("res://Levels/LVL1.tscn")
 
 
 func _on_Rage_pressed():
 	PlayerStats._CurrentClass = Rage
-	get_tree().change_scene("res://Levels/Level 1.tscn")
+	get_tree().change_scene("res://Levels/LVL1.tscn")
 
 
 func _on_Prepardness_pressed():
 	PlayerStats._CurrentClass = Wisdom
-	get_tree().change_scene("res://Levels/Level 1.tscn")
+	get_tree().change_scene("res://Levels/LVL1.tscn")
