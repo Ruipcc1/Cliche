@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=2]
+[gd_scene load_steps=157 format=2]
 
 [ext_resource path="res://Tilesets/swamp tileset/Terrain_and_Props.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/Multi_Platformer_Tileset_v2/GrassLand/Terrain/Grassland_Terrain_Tileset.png" type="Texture" id=2]
@@ -53,7 +53,8 @@
 [ext_resource path="res://Prefabs/Enemies/Hound.tscn" type="PackedScene" id=51]
 [ext_resource path="res://Prefabs/Enemies/Archer.tscn" type="PackedScene" id=52]
 [ext_resource path="res://Prefabs/Enemies/Dark knight.tscn" type="PackedScene" id=53]
-[ext_resource path="res://Scripts/DeathZone.gd" type="Script" id=54]
+[ext_resource path="res://Prefabs/Spawn.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Prefabs/DeathZone.tscn" type="PackedScene" id=55]
 
 [sub_resource type="ConvexPolygonShape2D" id=56]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -2303,7 +2304,6 @@ resource_local_to_scene = true
 62/shape_one_way_margin = 0.0
 62/shapes = [  ]
 62/z_index = 0
-script = ExtResource( 54 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 49 )
@@ -2412,9 +2412,16 @@ position = Vector2( 791, -46 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="dark knight" parent="." groups=["Enemy"] instance=ExtResource( 53 )]
-position = Vector2( 966, -58 )
+position = Vector2( 966, -59 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="dark knight2" parent="." groups=["Enemy"] instance=ExtResource( 53 )]
 position = Vector2( 195, -203 )
 scale = Vector2( 0.8, 0.8 )
+
+[node name="Spawn" parent="." instance=ExtResource( 54 )]
+position = Vector2( 87, -55 )
+
+[node name="DeathZone" parent="." instance=ExtResource( 55 )]
+position = Vector2( 450, 33 )
+scale = Vector2( 39.3958, 1.21114 )

@@ -1892,6 +1892,7 @@ resource_local_to_scene = true
 59/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( -11, -10 )
 script = ExtResource( 50 )
 
 [node name="background tiles" type="TileMap" parent="."]
@@ -2028,7 +2029,7 @@ position = Vector2( 432, -64 )
 scale = Vector2( 0.663, 0.587 )
 
 [node name="Hound3" parent="." groups=["Enemy"] instance=ExtResource( 52 )]
-position = Vector2( 859, -96 )
+position = Vector2( 859, -95 )
 scale = Vector2( 0.663, 0.587 )
 
 [node name="Archer" parent="." groups=["Enemy"] instance=ExtResource( 53 )]
@@ -2036,5 +2037,5 @@ position = Vector2( 782, -190 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Archer2" parent="." groups=["Enemy"] instance=ExtResource( 53 )]
-position = Vector2( 396, -189 )
+position = Vector2( 395, -191 )
 scale = Vector2( 0.5, 0.5 )
