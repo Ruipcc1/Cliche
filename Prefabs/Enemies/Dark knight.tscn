@@ -494,6 +494,7 @@ collision_mask = 2
 script = ExtResource( 1 )
 MaxHealth = 50
 CurrentHealth = 50
+Damage = 5.0
 hFrames = 2
 vFrames = 5
 
@@ -530,7 +531,7 @@ cast_to = Vector2( 40, 0 )
 collision_mask = 2
 
 [node name="GroundCheck" type="RayCast2D" parent="."]
-position = Vector2( -20, 0 )
+position = Vector2( 20, 0 )
 enabled = true
 
 [node name="LeftCheck" type="RayCast2D" parent="."]

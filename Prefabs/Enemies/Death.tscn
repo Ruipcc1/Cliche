@@ -941,6 +941,7 @@ disabled = true
 position = Vector2( -25, -25 )
 
 [node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]

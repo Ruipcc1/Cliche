@@ -313,6 +313,7 @@ collision_mask = 2
 script = ExtResource( 1 )
 MaxHealth = 30
 CurrentHealth = 30
+Damage = 15.0
 hFrames = 1
 vFrames = 8
 
