@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Beyond Wonderland.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/Player UI/LevelUpStats.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/LevelUpStats.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 1 )
+
+[node name="LevelUpText" type="KinematicBody2D"]
+
+[node name="LevelUpStats" type="RichTextLabel" parent="." instance=ExtResource( 2 )]
+margin_right = 100.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_colors/default_color = Color( 0.0666667, 0.647059, 0, 1 )
+custom_fonts/normal_font = SubResource( 15 )
+text = " + Bomb Dmg"
+script = ExtResource( 3 )

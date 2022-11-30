@@ -3,6 +3,7 @@ extends Node2D
 
 var enemies
 var allNodes
+export var nextLevel = "res://Levels/Start Menu.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,10 +13,9 @@ func _ready():
 
 func _process(delta):
 	enemies = get_tree().get_nodes_in_group("Enemy").size()
-	print_debug(enemies)
 
 
 func _enemyDied():
 	if get_tree().get_nodes_in_group("Enemy").size() == 1:
-		get_tree().change_scene("res://Levels/Start Menu.tscn")
+		get_tree().change_scene(nextLevel)
 	

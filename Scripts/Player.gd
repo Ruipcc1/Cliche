@@ -31,14 +31,18 @@ onready var attackArea = get_node("WeaponArea")
 onready var playerWeapon = get_node("WeaponArea/Weapon")
 onready var hitBoxColl = get_node("HitBox/Collider")
 onready var bombPacked = preload("res://Prefabs/Projectiles/Explosion.tscn")
+onready var levelUpPacked = preload("res://UI/Player UI/LevelUpText.tscn")
 
 var bomb
+var levelUpTextHolder
+var levelUpText
 
 func _ready():
 	characterSprite.set_texture(idleAnim)
 	characterSprite.hframes = 15
 	playerWeapon.disabled = true
 	bomb = bombPacked.instance()
+	levelUpTextHolder = levelUpPacked.instance()
 	
 	Damage = PlayerStats._Damage
 	MaxHealth = PlayerStats._MaxHealth
@@ -211,26 +215,33 @@ func _receiveDamagePlayer(Damage, HitRight):
 	CurrentHealth -= Damage
 	_HitRight = HitRight
 	PlayerCurrentState = Hit
-	
 	healthBarNode.value = CurrentHealth
+
+func _fallDamage(Damage):
+	CurrentHealth -= Damage
+	healthBarNode.value = CurrentHealth
+	self.position = $"../Spawn".global_position
+	PlayerCurrentState = Hit
 	
 func _LevelUp():
 	CurrentLevel += 1
 	PlayerStats._CurrentLevel = CurrentLevel
 	AlreadyDead = true
+	levelUpText = levelUpTextHolder.get_child(0)
 	
 	match CurrentClass:
 		Friendship:
 			MaxHealth += 20
 			CurrentHealth = MaxHealth
 			PlayerStats._MaxHealth = MaxHealth
-			
+			levelUpText.text = " + HP"
 		Rage:
 			CurrentHealth = MaxHealth
 			Damage += 5
 			Speed += 5
 			PlayerStats._Damage = Damage
 			PlayerStats._Speed = Speed
+			levelUpText.text = " + Attack \n + Speed"
 			
 		Wisdom:
 			CurrentHealth = MaxHealth
@@ -239,7 +250,9 @@ func _LevelUp():
 			PlayerStats._BombDamage = BombDamage
 			bomb.transform = $".".transform
 			get_parent().add_child(bomb)
+			levelUpText.text = " + Bomb Dmg"
 			
+	levelUpTextHolder.position = self.global_position
+	levelUpTextHolder.position.y -= 5
+	get_parent().add_child(levelUpTextHolder)
 	healthBarNode.value = CurrentHealth
-		
-	

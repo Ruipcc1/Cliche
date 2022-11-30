@@ -806,6 +806,7 @@ shape = SubResource( 36 )
 disabled = true
 
 [node name="HitBox" type="Area2D" parent="."]
+collision_layer = 9
 collision_mask = 0
 monitoring = false
 
