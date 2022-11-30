@@ -1931,15 +1931,15 @@ value = 10.0
 texture_progress = ExtResource( 48 )
 
 [node name="Player" parent="." instance=ExtResource( 50 )]
-position = Vector2( 458, -45 )
+position = Vector2( 221, -180 )
 scale = Vector2( 0.8, 0.77 )
 
 [node name="Archer" parent="." groups=["Enemy"] instance=ExtResource( 51 )]
-position = Vector2( 1082, -174 )
+position = Vector2( 1066, -174 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Archer2" parent="." groups=["Enemy"] instance=ExtResource( 51 )]
-position = Vector2( 31, -270 )
+position = Vector2( 44, -270 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Hound2" parent="." groups=["Enemy"] instance=ExtResource( 53 )]
