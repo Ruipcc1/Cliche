@@ -22,6 +22,8 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		OneAnim(defaultAnimName)
 		CurrentState = Walk
 	if anim_name == "Dead":
+		self.remove_from_group("Enemy")
+		$".."._enemyDied()
 		queue_free()
 	if anim_name == "Attack":
 		OneAnim(defaultAnimName)
