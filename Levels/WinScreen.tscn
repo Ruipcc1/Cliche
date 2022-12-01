@@ -60,6 +60,7 @@ text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -20.0
 autoplay = true
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

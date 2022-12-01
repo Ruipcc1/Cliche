@@ -76,6 +76,7 @@ text = "    Plot Armor"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -20.0
 autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
