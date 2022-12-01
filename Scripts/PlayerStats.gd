@@ -1,6 +1,7 @@
 extends Node
 
-export var _MaxHealth = 80
+export var _MaxHealth = 70
+export var _CurrentHealth = 70
 export var _Speed = 70
 export var _Damage = 10
 
@@ -9,7 +10,7 @@ var _CurrentLevel = 1
 var _CurrentClass = Friendship
 var _BombDamage = 10
 
-var baseHealth = 10
+var baseHealth = 70
 var baseSpeed = 70
 var baseDamage = 10
 var baseLevel = 1

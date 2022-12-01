@@ -80,6 +80,37 @@ text = "Arrow Keys To Move"
 readonly = true
 selecting_enabled = false
 
+[node name="Plot Armor Explanation" type="TextEdit" parent="Controls"]
+anchor_left = 0.045
+anchor_right = 0.155
+margin_left = 9.92
+margin_top = 51.0
+margin_right = 97.28
+margin_bottom = 131.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_constants/line_spacing = 8
+custom_fonts/font = SubResource( 1 )
+text = " You have one plot armor
+ per level and three in total"
+readonly = true
+selecting_enabled = false
+
+[node name="Plot Armor Explanation2" type="TextEdit" parent="Controls"]
+pause_mode = 2
+anchor_left = 0.045
+anchor_right = 0.155
+margin_left = 600.92
+margin_top = 51.0
+margin_right = 688.28
+margin_bottom = 131.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_constants/line_spacing = 8
+custom_fonts/font = SubResource( 1 )
+text = " The plot armor you choose
+ effects your gains per defeat"
+readonly = true
+selecting_enabled = false
+
 [node name="SpaceBar" type="TextEdit" parent="Controls"]
 anchor_left = 0.045
 anchor_right = 0.16

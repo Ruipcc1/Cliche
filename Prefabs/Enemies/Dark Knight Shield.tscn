@@ -66,6 +66,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [ 5 ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=42]
 resource_name = "Hit"
@@ -328,6 +340,30 @@ tracks/8/keys = {
 "update": 0,
 "values": [ 5 ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("CollisionShape2D:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=45]
 resource_name = "RightAttack"
@@ -484,7 +520,7 @@ tracks/3/keys = {
 
 [sub_resource type="RectangleShape2D" id=49]
 
-[sub_resource type="CircleShape2D" id=48]
+[sub_resource type="CapsuleShape2D" id=50]
 
 [node name="Dark Knight Shield" type="KinematicBody2D"]
 position = Vector2( 225, 16 )
@@ -548,11 +584,12 @@ scale = Vector2( 0.4, 2 )
 shape = SubResource( 49 )
 
 [node name="AttackRange" type="Area2D" parent="."]
+position = Vector2( -14, 12 )
 collision_layer = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="AttackRange"]
-scale = Vector2( 5, 5 )
-shape = SubResource( 48 )
+scale = Vector2( 3, 2 )
+shape = SubResource( 50 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]

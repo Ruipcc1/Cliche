@@ -13,6 +13,9 @@ func _ready():
 	hitAnimName = "Hit"
 	deadAnimName = "Dead"
 	
+	projectileLauncher = true
+	projectilePath = "AttackRange"
+	
 	OneAnim(defaultAnimName)
 
 
@@ -49,11 +52,13 @@ func _on_AttackRange_area_entered(area):
 		if area.global_position <= self.position:
 			walkingRight = !walkingRight
 			$GroundCheck.position.x = -$GroundCheck.position.x
+			$AttackRange.position.x = -$AttackRange.position.x
 			$Sprite.flip_h = false
 	elif !walkingRight:
 		if area.global_position >= self.position:
 			walkingRight = !walkingRight
 			$GroundCheck.position.x = -$GroundCheck.position.x
+			$AttackRange.position.x = -$AttackRange.position.x
 			$Sprite.flip_h = true
 	_attack()
 	

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Start Menu.gd" type="Script" id=1]
 [ext_resource path="res://UI/MenuBG.png" type="Texture" id=2]
 [ext_resource path="res://UI/Beyond Wonderland.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sound/honor-and-sword-main-11222.mp3" type="AudioStream" id=4]
 
 [sub_resource type="Theme" id=1]
 
@@ -72,6 +73,10 @@ margin_bottom = 140.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "    Plot Armor"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]

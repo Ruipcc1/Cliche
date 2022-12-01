@@ -1809,7 +1809,6 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Archer2" parent="." groups=["Enemy"] instance=ExtResource( 51 )]
 position = Vector2( 75, -271 )
 scale = Vector2( 0.5, 0.5 )
-walkingRight = true
 
 [node name="Hound2" parent="." groups=["Enemy"] instance=ExtResource( 53 )]
 position = Vector2( 603, -49 )
@@ -1822,12 +1821,10 @@ scale = Vector2( 0.663, 0.587 )
 [node name="Dark Knight Shield" parent="." groups=["Enemy"] instance=ExtResource( 52 )]
 position = Vector2( 966, -59 )
 scale = Vector2( 0.8, 0.8 )
-walkingRight = true
 
 [node name="Dark Knight Shield2" parent="." groups=["Enemy"] instance=ExtResource( 52 )]
 position = Vector2( 76, -75 )
 scale = Vector2( 0.8, 0.8 )
-walkingRight = true
 
 [node name="Spawn" parent="." instance=ExtResource( 55 )]
 position = Vector2( 543, -335 )

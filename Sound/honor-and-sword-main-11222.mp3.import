@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/honor-and-sword-main-11222.mp3-4b83ec17355aa3fec7eb09b46aa62bbc.mp3str"
+
+[deps]
+
+source_file="res://Sound/honor-and-sword-main-11222.mp3"
+dest_files=[ "res://.import/honor-and-sword-main-11222.mp3-4b83ec17355aa3fec7eb09b46aa62bbc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

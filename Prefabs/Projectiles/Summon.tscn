@@ -38,7 +38,6 @@ tracks/0/keys = {
 
 [node name="summon" type="KinematicBody2D"]
 position = Vector2( 210, -3 )
-scale = Vector2( 0.440698, 0.379973 )
 collision_layer = 0
 script = ExtResource( 1 )
 

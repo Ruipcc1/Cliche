@@ -46,7 +46,7 @@ func _ready():
 	
 	Damage = PlayerStats._Damage
 	MaxHealth = PlayerStats._MaxHealth
-	CurrentHealth = MaxHealth
+	CurrentHealth = PlayerStats._CurrentHealth
 	Speed = PlayerStats._Speed
 	CurrentClass = PlayerStats._CurrentClass
 	CurrentLevel = PlayerStats._CurrentLevel
@@ -166,7 +166,7 @@ func States(delta = get_process_delta_time()):
 					Motion.x -= lerp(Motion.x, -knockback, 0.5)
 					Motion.y = lerp(0, -knockup, 0.1)
 		Dead:
-			if AlreadyDead || CurrentLevel == 5:
+			if AlreadyDead || CurrentLevel == 3:
 				Motion.x = 0
 				OneAnim("Dead")
 			else:
@@ -199,6 +199,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		PlayerStats._MaxHealth = PlayerStats.baseHealth
 		PlayerStats._Speed = PlayerStats.baseSpeed
 		PlayerStats._BombDamage = PlayerStats.baseBomb
+		PlayerStats._CurrentHealth = PlayerStats.baseHealth
 		
 		get_tree().change_scene("res://Levels/Start Menu.tscn")
 	if anim_name == "Hit":
@@ -216,12 +217,14 @@ func _receiveDamagePlayer(Damage, HitRight):
 	_HitRight = HitRight
 	PlayerCurrentState = Hit
 	healthBarNode.value = CurrentHealth
+	PlayerStats._CurrentHealth = CurrentHealth
 
 func _fallDamage(Damage):
 	CurrentHealth -= Damage
 	healthBarNode.value = CurrentHealth
 	self.position = $"../Spawn".global_position
 	PlayerCurrentState = Hit
+	PlayerStats._CurrentHealth = CurrentHealth
 	
 func _LevelUp():
 	CurrentLevel += 1
@@ -231,7 +234,7 @@ func _LevelUp():
 	
 	match CurrentClass:
 		Friendship:
-			MaxHealth += 20
+			MaxHealth += 10
 			CurrentHealth = MaxHealth
 			PlayerStats._MaxHealth = MaxHealth
 			levelUpText.text = " + HP"
@@ -256,3 +259,4 @@ func _LevelUp():
 	levelUpTextHolder.position.y -= 5
 	get_parent().add_child(levelUpTextHolder)
 	healthBarNode.value = CurrentHealth
+	PlayerStats._CurrentHealth = MaxHealth
