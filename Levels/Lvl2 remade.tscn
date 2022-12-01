@@ -3578,9 +3578,31 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 549.063, -175.5 )
+scale = Vector2( 2.95686, 1.96634 )
+texture = ExtResource( 46 )
+
+[node name="dessert bg" type="Sprite" parent="Sprite"]
+position = Vector2( 0.0584259, 55.1786 )
+scale = Vector2( 0.792668, 0.875304 )
+texture = ExtResource( 48 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="dessert bg2" type="Sprite" parent="Sprite"]
+position = Vector2( -12.2672, 62.3189 )
+scale = Vector2( 0.794284, 0.875304 )
+texture = ExtResource( 47 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Sprite3" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( -521, -175.5 )
+position = Vector2( -507, -172 )
 scale = Vector2( 2.95686, 1.96634 )
 texture = ExtResource( 46 )
 __meta__ = {
@@ -3596,31 +3618,6 @@ __meta__ = {
 }
 
 [node name="dessert bg2" type="Sprite" parent="Sprite3"]
-position = Vector2( -12.2672, 62.3189 )
-scale = Vector2( 0.794284, 0.875304 )
-texture = ExtResource( 47 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Sprite" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 549.063, -175.5 )
-scale = Vector2( 2.95686, 1.96634 )
-texture = ExtResource( 46 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="dessert bg" type="Sprite" parent="Sprite"]
-position = Vector2( 0.0584259, 55.1786 )
-scale = Vector2( 0.792668, 0.875304 )
-texture = ExtResource( 48 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="dessert bg2" type="Sprite" parent="Sprite"]
 position = Vector2( -12.2672, 62.3189 )
 scale = Vector2( 0.794284, 0.875304 )
 texture = ExtResource( 47 )
